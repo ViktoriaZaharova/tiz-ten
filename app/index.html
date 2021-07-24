@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+  <meta charset="utf-8">
+  <title>Тиз Тен</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+
+
+<header>
+  <div class="header-top">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+      <ul class="header-menu d-mobile">
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+      <a href="tel:+74993912732" class="phone-mobile">
+        <svg class="svg-icon"><use xlink:href="img/sprite.svg#phone-mobile"></use></svg>
+      </a>
+      <div class="header-box">
+        <div class="header-item-address">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#location"></use>
+          </svg>
+          <div class="header-item__text">Москва, ул. Нагатинская, 31</div>
+        </div>
+        <a href="#" class="header-item-address">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#map"></use>
+          </svg>
+          <div class="header-item__text">Пункты выдачи</div>
+        </a>
+      </div>
+      <div class="header-box">
+        <a href="tel:+74993912732" class="phone">8 (499) 391-27-32</a>
+        <a href="mailto:tvoiservis@mail.ru" class="mail">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#mail"></use>
+          </svg>
+          <span class="mail-text">tvoiservis@mail.ru</span>
+        </a>
+      </div>
+      <div class="header-box">
+        <a href="#" class="links-messenger">
+          <span class="links-messenger__icon"><img src="img/whatsapp.svg" alt=""></span>
+          <span class="links-messenger__text">WhatsApp</span>
+        </a>
+        <a href="tel:+79777157294" class="phone">8 (977) 715-72-94</a>
+        <a href="#" class="links-messenger">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#phone"></use>
+          </svg>
+          <span class="links-messenger__text">Обратный звонок</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="container">
+      <a href="#" class="btn-burger btn-burger-mobile d-mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      <a href="menu.html" class="btn-catalog">
+        <span class="btn-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="btn-catalog__text">Каталог</span>
+      </a>
+
+      <form method="post" class="form-search">
+        <label>
+          <input type="text" placeholder="Поиск товаров" name="search">
+        </label>
+        <button type="submit">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </form>
+
+      <ul class="header-menu">
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+
+      <a href="#" class="btn-basket">
+        <span class="btn-basket__icon">
+          <svg class="svg-icon"><use xlink:href="img/sprite.svg#basket"></use></svg>
+          <span class="btn-basket__val">28</span>
+        </span>
+        <span class="btn-basket__sum">3 500 Р</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="category">
+  <div class="container">
+    <h2>Запчасти для бытовой техники</h2>
+
+    <div class="w-100">
+      <div class="row">
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product1.jpeg" alt=""></span>
+            <span class="category-box__title">Запчасти для Водонагревателей</span>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product2.jpeg" alt=""></span>
+            <span class="category-box__title">ТЭНы для Саун</span>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product3.jpeg" alt=""></span>
+            <span class="category-box__title">Запчасти
+для Шаурмы</span>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product4.jpeg" alt=""></span>
+            <span class="category-box__title">Запчасти
+для Электрокотлов</span>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product5.jpeg" alt=""></span>
+            <span class="category-box__title">Запчасти
+для Пылесосов</span>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product6.jpeg" alt=""></span>
+            <span class="category-box__title">Запчасти
+для Парогенераторов</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="category popular-category">
+  <div class="container">
+    <h2>Популярные каталоги</h2>
+
+    <div class="w-100">
+      <div class="row">
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product7.jpeg" alt=""></span>
+            <span class="category-box__title">
+ТЭНы Аристон</span>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product8.jpeg" alt=""></span>
+            <span class="category-box__title">
+ТЭНы Термекс</span>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product9.jpeg" alt=""></span>
+            <span class="category-box__title">ТЭНы с терморегулятором
+</span>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product10.jpeg" alt=""></span>
+            <span class="category-box__title">ТЭНы радиаторные</span>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product11.jpeg" alt=""></span>
+            <span class="category-box__title">
+Блоки ТЭНов
+</span>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="category-box">
+            <span class="category-box__img"><img src="img/category-product12.jpeg" alt=""></span>
+            <span class="category-box__title">
+ТЭНы Харвия</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-box footer-box-first">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+        <div class="header-item-address">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#location"></use>
+          </svg>
+          <div class="header-item__text">Москва, ул. Нагатинская, 31</div>
+        </div>
+        <a href="#" class="header-item-address">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#map"></use>
+          </svg>
+          <div class="header-item__text">Пункты выдачи</div>
+        </a>
+
+        <a href="#" class="yandex-links"><img src="img/yandex.jpeg" alt=""></a>
+      </div>
+
+
+      <a href="#" class="btn-mobile btn-border-red btn">Карта пунктов выдачи</a>
+      <div class="footer-box">
+        <h3>Информация <a href="#" class="btn-arrow-toggle">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+          </svg>
+        </a></h3>
+        <div class="footer-box__body">
+          <ul class="footer-menu">
+            <li><a href="#">О Компании</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Возврат и обмен товара</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Юридическим лицам</a></li>
+            <li><a href="#">Сотрудничество с мастерами</a></li>
+            <li><a href="#">Поставщикам</a></li>
+            <li><a href="#">Полезные статьи</a></li>
+            <li><a href="#">Карта сайта</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Каталог запчастей <a href="#" class="btn-arrow-toggle">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+          </svg>
+        </a></h3>
+        <div class="footer-box__body">
+          <ul class="footer-menu">
+            <li><a href="#">Водонагреватели</a></li>
+            <li><a href="#">Электрокотлы</a></li>
+            <li><a href="#">Электрокаменки</a></li>
+            <li><a href="#">Стиральные машины</a></li>
+            <li><a href="#">Аппараты для шаурмы</a></li>
+            <li><a href="#">Фритюрницы</a></li>
+            <li><a href="#">Электроплиты</a></li>
+            <li><a href="#">Тэны для отопления</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Контакты <a href="#" class="btn-arrow-toggle">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+          </svg>
+        </a></h3>
+        <div class="footer-box__body">
+          <a href="tel:+74993912732" class="phone">8 (499) 391-27-32</a>
+          <a href="tel:+79777157294" class="phone">8 (977) 715-72-94</a>
+          <a href="mailto:tvoiservis@mail.ru" class="mail">
+            <svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#mail"></use>
+            </svg>
+            <span class="mail-text">tvoiservis@mail.ru</span>
+          </a>
+          <ul class="list-social">
+            <li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/whatsapp.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/callback.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="copyright">© 2012 – 2021 «ТизТэн». Все права защищены.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>
