@@ -213,7 +213,7 @@ button {
   fill: #B0B0B0; }
 
 header {
-  padding: 29px 0 0;
+  padding: 26px 0 0;
   width: 100%;
   border-bottom: 1px solid #BCBCBC; }
   header .container {
@@ -224,7 +224,7 @@ header {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   header .phone {
-    margin: 5px 0; }
+    margin: 8px 0 10px; }
   header .d-mobile {
     display: none; }
 
@@ -485,7 +485,7 @@ footer {
 .footer-box h3 {
   font-weight: 600;
   font-size: 18px;
-  margin: 0 0 10px;
+  margin: 0 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -594,23 +594,15 @@ footer {
   max-width: 270px;
   width: 100%;
   position: relative;
-  z-index: 1;
-  padding: 30px 0; }
-  .menu-main:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 2000px;
-    background: #F0F0F0;
-    z-index: -1; }
+  padding: 30px 0;
+  background: #F0F0F0; }
 
 .menu-main__list {
   font-weight: 600; }
   .menu-main__list li {
     margin: 0 0 30px; }
     .menu-main__list li a {
+      padding: 0 0 0 15px;
       color: #000; }
       .menu-main__list li a:hover {
         color: #F50706; }
@@ -667,7 +659,7 @@ footer {
   left: 0;
   z-index: 3;
   background: #fff;
-  top: 165px;
+  top: 170px;
   display: none; }
 
 .mobile-menu__list-links {
@@ -749,7 +741,8 @@ footer {
     .mobile-menu-sub li a:hover {
       background: #F1F1F1; }
   .mobile-menu-sub li .prev-menu {
-    color: #000000; }
+    color: #000000;
+    padding: 10px 15px; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -817,7 +810,7 @@ footer {
   .phone {
     font-size: 16px; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .col-4 {
     width: 50%; }
   h1, h2 {
@@ -872,7 +865,8 @@ footer {
   .category {
     margin: 30px 0 40px; }
   .form-search {
-    max-width: 210px; }
+    max-width: none;
+    width: calc(100% - 40px - 40px); }
   .btn-basket__sum {
     display: none; }
   .btn-basket__icon {
@@ -905,8 +899,3 @@ footer {
     height: 130px; }
   .popular-category .category-box__img {
     height: 100px; } }
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width: 360px) {
-  .form-search {
-    max-width: 190px; } }

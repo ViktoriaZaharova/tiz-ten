@@ -88,7 +88,7 @@
   .phone
     font-size: 16px
 
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 767px)
   .col-4
     width: 50%
 
@@ -150,7 +150,8 @@
     margin: 30px 0 40px
 
   .form-search
-    max-width: 210px
+    max-width: none
+    width: calc(100% - 40px - 40px)
 
   .btn-basket__sum
     display: none
@@ -195,9 +196,5 @@
   .popular-category .category-box__img
     height: 100px
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width: 360px)
-  .form-search
-    max-width: 190px
 
 
