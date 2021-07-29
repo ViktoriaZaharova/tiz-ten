@@ -5,16 +5,17 @@ $('.btn-arrow-toggle').on('click', function (e) {
     $(this).parent().toggleClass('click').siblings('.footer-box__body').slideToggle();
 });
 
-$('.menu-main__list li a').each(function () {
-    var location = window.location.href;
-    var link = this.href;
-    if (location === link) {
-        $(this).addClass('current');
-    }
-});
+// $('.menu-main__list li a').each(function () {
+//     var location = window.location.href;
+//     var link = this.href;
+//     if (location === link) {
+//         $(this).addClass('current');
+//     }
+// });
 
 $('.btn-catalog').on('click', function (e) {
     e.preventDefault();
+    $('.overlay-menu').fadeToggle();
     $(this).toggleClass('open-menu');
     $('.menu-container').fadeToggle();
 });
