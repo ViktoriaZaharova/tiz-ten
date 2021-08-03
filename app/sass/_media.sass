@@ -10,6 +10,16 @@
   .logo
     max-width: 230px
 
+  .gallery-product
+    max-width: 500px
+
+  .product-information
+    width: calc(100% - 500px)
+
+  .gallery-product-max__item
+    height: 320px
+
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
   .copyright
@@ -92,6 +102,41 @@
   .phone
     font-size: 16px
 
+  .product-information
+    width: 100%
+    padding: 20px 0 0
+    flex-direction: column
+    align-items: flex-start
+    display: flex
+
+  .product-information-bottom
+    order: -1
+    margin: 0 0 20px
+
+  .gallery-product__item
+    height: 80px
+    max-width: 100px
+
+  .gallery-product
+    flex-direction: column
+    align-items: center
+    width: 100%
+    max-width: none
+
+  .gallery-product-preview
+    max-width: none
+    order: 1
+    margin: 20px 0 0
+
+
+  .gallery-product__item
+    margin: 0 auto
+
+  .gallery-product-max
+    padding: 0
+    width: 90%
+    margin: 0 auto
+
 @media only screen and (max-width: 767px)
   .col-4
     width: 50%
@@ -114,6 +159,29 @@
 
   .mobile-menu
     top: 122px
+
+  .accessories-card__img
+    width: 120px
+    height: 80px
+
+  .accessories-card
+    padding: 20px 0
+    .article
+      width: 20%
+
+  .models-col
+    width: 50%
+
+  .models-box
+    margin: 0 0 30px
+    &:last-child
+      margin: 0 0 30px
+
+  .tabs__caption
+    font-size: 14px
+
+  .tabs__content
+    padding: 30px 0 0
 
 @media only screen and (max-width: 576px)
   .footer-box-first
@@ -190,6 +258,67 @@
   .mobile-menu
     top: 107px
 
+  .accessories-card
+    width: 48%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    padding: 0
+    border: none
+    margin: 0 0 30px
+    &__img
+      width: 100%
+      height: 160px
+      order: -1
+    &__body
+      width: 100%
+      order: -1
+      padding: 10px 0
+    &__footer
+      width: 100%
+      max-width: none
+    .price
+      text-align: left
+      margin: 0 0 10px
+    .btn
+      margin: 0
+    .box-text
+      min-height: auto
+      font-size: 14px
+      margin: 5px 0
+    .article
+      margin: 10px 0
+    &__title
+      font-size: 18px
+
+  .accessories
+    .section-wrapper
+      display: flex
+      align-items: stretch
+      justify-content: space-between
+      flex-wrap: wrap
+
+  .product-page
+    padding: 30px 0
+
+  .gallery-product-max__item
+    height: 260px
+
+  .product-information h3
+    font-size: 22px
+
+  .list-characteristics
+    font-size: 14px
+    li
+      flex-wrap: wrap
+
+  .section-wrapper h3
+    font-size: 22px
+
+  .breadcrumb
+    margin: 0 0 20px
+    font-size: 12px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
   .category-box
@@ -206,3 +335,15 @@
     margin: 10px 0 0
     &:first-child
       margin: 0
+
+  .btn-accent
+    font-size: 16px
+
+  .gallery-product-max__item
+    height: 220px
+
+  .gallery-product-max
+    width: 100%
+
+  .price-product
+    margin: 0 auto 0 0

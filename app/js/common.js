@@ -63,3 +63,59 @@ function accordeon() {
 }
 
 accordeon();
+
+
+$('.gallery-product-max').slick({
+    slidesToShow: 1,
+    fade: true,
+    arrows: false,
+    dots: false,
+    asNavFor: '.gallery-product-preview',
+    focusOnSelect: true,
+});
+
+$('.gallery-product-preview').slick({
+    slidesToShow: 3,
+    arrows: false,
+    dots: false,
+    asNavFor: '.gallery-product-max',
+    focusOnSelect: true,
+    vertical: true,
+    responsive: [
+        {
+            breakpoint: 860,
+            settings: {
+                vertical: false,
+                slidesToShow: 6,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 5,
+                vertical: false,
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 3,
+                vertical: false,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                vertical: false,
+            }
+        }
+    ]
+});
+
+// tabs
+$('ul.tabs__caption').on('click', 'li:not(.active)', function () {
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+});
