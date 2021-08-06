@@ -114,8 +114,8 @@
     margin: 0 0 20px
 
   .gallery-product__item
-    height: 80px
-    max-width: 100px
+    height: 120px
+    max-width: 97%
 
   .gallery-product
     flex-direction: column
@@ -130,7 +130,7 @@
 
 
   .gallery-product__item
-    margin: 0 auto
+    margin: 0
 
   .gallery-product-max
     padding: 0
@@ -274,22 +274,32 @@
       width: 100%
       order: -1
       padding: 10px 0
+      display: none
     &__footer
       width: 100%
       max-width: none
     .price
-      text-align: left
-      margin: 0 0 10px
+      display: none
     .btn
       margin: 0
-    .box-text
-      min-height: auto
-      font-size: 14px
-      margin: 5px 0
+
     .article
       margin: 10px 0
     &__title
       font-size: 18px
+      &-mob
+        display: block
+        color: #000
+        margin: 0 0 10px
+        font-weight: 500
+    &:first-child
+      border: none
+
+  .price-card-mob
+    color: #F50706
+    font-weight: 500
+    font-size: 18px
+    display: block
 
   .accessories
     .section-wrapper
@@ -319,6 +329,9 @@
     margin: 0 0 20px
     font-size: 12px
 
+  .tabs__caption li
+    padding: 7px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
   .category-box
@@ -346,4 +359,10 @@
     width: 100%
 
   .price-product
-    margin: 0 auto 0 0
+    margin: 0 20px 0 0
+
+  .product-information-bottom
+    justify-content: center
+
+  .gallery-product__item
+    height: 90px
