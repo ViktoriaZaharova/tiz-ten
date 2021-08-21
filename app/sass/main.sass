@@ -290,15 +290,57 @@ header
     &:last-child
       transform: rotate(135deg)
 
+.form-search-wrap
+  position: relative
+  margin: 0 0 0 19px
+  max-width: 538px
+  width: 100%
+
+.form-search-result
+  position: absolute
+  left: 0
+  top: 100%
+  z-index: 2
+  margin: 10px 0 0
+  background: #fff
+  box-sizing: content-box
+  box-shadow: 1px 1px 5px rgba(198,203,203, .5)
+  border-radius: .5rem
+  width: 100%
+  padding: 10px 0
+  display: none
+
+.btn-search-clear
+  position: absolute
+  right: 15px
+  top: 50%
+  transform: translate(0,-50%)
+  width: 20px
+  height: 20px
+  fill: #333
+  display: none
+  align-items: center
+  justify-content: center
+
+.result-text
+  padding: 8px 15px
+  font-weight: 500
+  color: $accent
+
+.search-list
+  li
+    width: 100%
+    a
+      padding: 8px 15px
+      color: #000
+      &:hover
+        background: #F0F0F0
 
 .form-search
   display: flex
   align-items: center
   position: relative
-  max-width: 538px
   width: 100%
-  margin: 0 0 0 19px
-
   button
     position: absolute
     top: 50%
