@@ -1036,6 +1036,39 @@ footer {
     width: calc(100% - 200px);
     padding: 0 0 0 20px; }
 
+.breadcrumbs {
+  width: 100%;
+  position: relative;
+  margin: 0 0 20px; }
+
+.breadcrumbs-button {
+  padding: 12px 8px 12px 0;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #727272; }
+  .breadcrumbs-button__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0 0 5px;
+    width: 16px;
+    height: 16px; }
+
+.breadcrumb.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .breadcrumb {
   width: 100%;
   display: -webkit-box;
@@ -1047,8 +1080,7 @@ footer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-size: 14px;
-  color: #727272;
-  margin: 0 0 20px; }
+  color: #727272; }
   .breadcrumb li a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1867,9 +1899,8 @@ footer {
           flex-wrap: wrap; }
   .section-wrapper h3 {
     font-size: 22px; }
-  .breadcrumb {
-    margin: 0 0 20px;
-    font-size: 12px; }
+  .breadcrumbs {
+    margin: 0 0 20px; }
   .tabs__caption li {
     padding: 7px; }
   .spare-parts-list li {
@@ -1909,7 +1940,39 @@ footer {
   .spares-card {
     margin: 0 0 30px; }
     .spares-card__img {
-      height: 130px; } }
+      height: 130px; }
+  .breadcrumbs-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .breadcrumb {
+    display: none;
+    position: absolute;
+    left: -8px;
+    top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0;
+    font-size: 14px;
+    background: #fff;
+    z-index: 2;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 5px 20px rgba(145, 152, 160, 0.2);
+            box-shadow: 0 5px 20px rgba(145, 152, 160, 0.2);
+    max-width: 260px;
+    width: 100%; }
+    .breadcrumb li {
+      width: 100%; }
+      .breadcrumb li a, .breadcrumb li span {
+        display: block;
+        padding: 12px 8px; }
+      .breadcrumb li a:after {
+        display: none; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {

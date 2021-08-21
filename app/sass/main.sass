@@ -970,6 +970,29 @@ footer
       padding: 0 0 0 20px
 
 //breadcrumb
+.breadcrumbs
+  width: 100%
+  position: relative
+  margin: 0 0 20px
+
+.breadcrumbs-button
+  padding: 12px 8px 12px 0
+  display: none
+  align-items: center
+  cursor: pointer
+  font-size: 14px
+  color: #727272
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 0 0 5px
+    width: 16px
+    height: 16px
+
+.breadcrumb.open
+  display: flex
+
 .breadcrumb
   width: 100%
   display: flex
@@ -977,7 +1000,7 @@ footer
   flex-wrap: wrap
   font-size: 14px
   color: #727272
-  margin: 0 0 20px
+
 
   li
     a

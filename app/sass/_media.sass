@@ -347,9 +347,9 @@
   .section-wrapper h3
     font-size: 22px
 
-  .breadcrumb
+  .breadcrumbs
     margin: 0 0 20px
-    font-size: 12px
+
 
   .tabs__caption li
     padding: 7px
@@ -390,6 +390,35 @@
     margin: 0 0 30px
     &__img
       height: 130px
+
+  .breadcrumbs-button
+    display: flex
+
+
+  .breadcrumb
+    display: none
+    position: absolute
+    left: -8px
+    top: 0
+    flex-direction: column
+    align-items: flex-start
+    margin: 0
+    font-size: 14px
+    background: #fff
+    z-index: 2
+    border-radius: 4px
+    box-shadow: 0 5px 20px rgba(145, 152, 160, 0.2)
+    max-width: 260px
+    width: 100%
+    li
+      width: 100%
+      a, span
+        display: block
+        padding: 12px 8px
+      a
+        &:after
+          display: none
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
