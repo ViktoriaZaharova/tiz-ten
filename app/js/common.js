@@ -123,3 +123,16 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
 $('.breadcrumbs-button').on('click', function () {
    $('.breadcrumb').toggleClass('open');
 });
+
+// input search
+$(function () {
+    $('.form-search input').keydown(checkInput).keyup(checkInput);
+});
+
+function checkInput() {
+    if ($('.form-search input').val() === '') {
+        $(this).parents('.form-search-wrap').removeClass('clicked');
+    } else {
+        $(this).parents('.form-search-wrap').addClass('clicked');
+    }
+}

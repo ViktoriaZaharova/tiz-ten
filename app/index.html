@@ -440,16 +440,34 @@
         <span class="btn-catalog__text">Каталог</span>
       </a>
 
-      <form method="post" class="form-search">
-        <label>
-          <input type="text" placeholder="Поиск товаров" name="search">
-        </label>
-        <button type="submit">
-          <svg class="svg-icon">
-            <use xlink:href="img/sprite.svg#search"></use>
-          </svg>
-        </button>
-      </form>
+      <div class="form-search-wrap">
+        <form method="post" class="form-search">
+          <label>
+            <input type="text" placeholder="Поиск товаров" name="search">
+          </label>
+          <button type="submit">
+            <svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+
+          </button>
+          <a href="#" class="btn btn-search-clear">
+            <svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </a>
+        </form>
+        <div class="form-search-result">
+          <div class="result-text">Совпадений не найдено</div>
+          <ul class="search-list">
+            <li><a href="#"><span class="color-accent">Запчасти</span> для водонагревателя</a></li>
+            <li><a href="#">Запчасти для водонагревателя</a></li>
+            <li><a href="#">Запчасти для водонагревателя</a></li>
+            <li><a href="#">Запчасти для водонагревателя</a></li>
+            <li><a href="#">Запчасти для водонагревателя</a></li>
+          </ul>
+        </div>
+      </div>
 
       <ul class="header-menu">
         <li><a href="#">Доставка</a></li>

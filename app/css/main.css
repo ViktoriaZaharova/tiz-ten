@@ -370,6 +370,17 @@ header {
     .search-list li a:hover {
       background: #F0F0F0; }
 
+.clicked .form-search button {
+  display: none; }
+
+.clicked .btn-search-clear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.clicked .form-search-result {
+  display: block; }
+
 .form-search {
   display: -webkit-box;
   display: -ms-flexbox;
