@@ -1354,5 +1354,66 @@ footer
     a
       color: #000
 
+//page model
+.model-gallery
+  max-width: 500px
+
+.model-page
+  .product-information
+    width: calc(100% - 500px)
+    padding: 0 0 0 30px
+  .list-characteristics
+    li
+      &:last-child
+        border: none
+
+.model-gallery__img
+  width: 100%
+  height: 382px
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    max-height: 100%
+
+//spares
+.spares
+  .section-wrapper
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+.spares-card
+  width: 33.3%
+  margin: 0 0 60px
+  &__img
+    max-width: 330px
+    width: 100%
+    height: 274px
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      max-height: 100%
+  &__body
+    padding: 23px 0 0
+  &__price
+    color: #F50706
+    font-size: 20px
+    span
+      font-size: 16px
+      display: inline-block
+  &__article
+    margin: 10px 0 8px
+    font-size: 18px
+  &__title
+    color: #525252
+    font-size: 18px
+    margin: 0 0 14px
+
+
+
+
+
 @import "media"
 // Всегда в конце
