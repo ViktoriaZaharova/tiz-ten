@@ -1110,7 +1110,10 @@ footer {
           align-items: center;
   cursor: pointer;
   font-size: 14px;
-  color: #727272; }
+  color: #727272;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
   .breadcrumbs-button__icon {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1584,7 +1587,7 @@ footer {
 
 .model-page .product-information {
   width: calc(100% - 500px);
-  padding: 0 0 0 30px; }
+  padding: 10px 0 0 30px; }
 
 .model-page .list-characteristics li:last-child {
   border: none; }
@@ -1595,9 +1598,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
@@ -1997,7 +2000,21 @@ footer {
   .model-page .product-information {
     display: none; }
   .spares-card__title {
-    font-size: 14px; }
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 10px;
+    min-height: 40px;
+    max-height: 40px;
+    overflow: hidden; }
+  .accessories-card .article {
+    width: 100%;
+    text-align: left; }
+  .spares-card__article {
+    margin: 10px 0; }
+  .spares-card__price {
+    font-size: 18px;
+    font-weight: 500; }
   .spares-card {
     margin: 0 0 30px; }
     .spares-card__img {

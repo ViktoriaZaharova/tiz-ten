@@ -136,3 +136,12 @@ function checkInput() {
         $(this).parents('.form-search-wrap').addClass('clicked');
     }
 }
+
+// событие клика за пределами блока
+$(document).mouseup(function (e){ // событие клика по веб-документу
+    var div = $(".breadcrumb.open"); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        div.removeClass('open'); // скрываем его
+    }
+});
