@@ -535,8 +535,6 @@ footer
     margin: 0 0 10px
     overflow: hidden
 
-    img
-      margin: 0 0 0 -135px
 
 .footer-bottom
   padding: 16px 0
@@ -1061,9 +1059,13 @@ footer
       color: #727272
 
       &:after
-        content: '/'
+        content: ''
         display: inline-block
         margin: 0 5px
+        background: url("../img/arrow-right.svg") no-repeat center
+          size: 100%
+        width: 16px
+        height: 16px
 
       &:hover
         color: $accent
@@ -1301,7 +1303,7 @@ footer
   .box-text
     min-height: 48px
     line-height: 24px
-    max-width: 300px
+    //max-width: 300px
 
   .btn
     margin: 0 0 0 auto

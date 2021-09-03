@@ -584,8 +584,6 @@ footer {
     width: 100%;
     margin: 0 0 10px;
     overflow: hidden; }
-    footer .logo img {
-      margin: 0 0 0 -135px; }
 
 .footer-bottom {
   padding: 16px 0;
@@ -1154,9 +1152,13 @@ footer {
             align-items: center;
     color: #727272; }
     .breadcrumb li a:after {
-      content: '/';
+      content: '';
       display: inline-block;
-      margin: 0 5px; }
+      margin: 0 5px;
+      background: url("../img/arrow-right.svg") no-repeat center;
+        background-size: 100%;
+      width: 16px;
+      height: 16px; }
     .breadcrumb li a:hover {
       color: #F50706; }
 
@@ -1433,8 +1435,7 @@ footer {
       overflow: hidden; }
   .accessories-card .box-text {
     min-height: 48px;
-    line-height: 24px;
-    max-width: 300px; }
+    line-height: 24px; }
   .accessories-card .btn {
     margin: 0 0 0 auto; }
   .accessories-card .price {
@@ -1652,7 +1653,6 @@ footer {
     margin: 0 0 14px; }
 
 /*==========  Desktop First  ==========*/
-/* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
   .form-search-wrap {
     max-width: 338px; }
@@ -1673,7 +1673,6 @@ footer {
       .spare-parts-list li a {
         margin: 0 auto; } }
 
-/* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .copyright {
     font-size: 12px; }
@@ -1700,7 +1699,9 @@ footer {
   header .header-item-address {
     margin: 0 0 10px; }
   header .phone {
-    margin: 0 0 9px; } }
+    margin: 0 0 9px; }
+  .footer-menu {
+    font-size: 14px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 860px) {
@@ -1779,7 +1780,9 @@ footer {
     margin: 0 auto; }
   .model-page .product-information {
     width: 100%;
-    padding: 0; } }
+    padding: 0; }
+  .footer-box {
+    width: 25%; } }
 
 @media only screen and (max-width: 767px) {
   .col-4 {
@@ -1825,7 +1828,9 @@ footer {
 
 @media only screen and (max-width: 670px) {
   .spare-parts-page__img {
-    display: none; } }
+    display: none; }
+  .footer-box {
+    width: 50%; } }
 
 @media only screen and (max-width: 576px) {
   .footer-box-first {
@@ -1995,9 +2000,7 @@ footer {
     margin: 0 0 30px; }
   .spares-card {
     width: 50%; }
-  .model-gallery {
-    display: none; }
-  .model-page .product-information {
+  .model-page .section-wrapper {
     display: none; }
   .spares-card__title {
     font-size: 16px;
@@ -2050,9 +2053,10 @@ footer {
         display: block;
         padding: 12px 8px; }
       .breadcrumb li a:after {
-        display: none; } }
+        display: none; }
+  .spares h2 {
+    display: none; } }
 
-/* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .category-box {
     font-size: 14px; }

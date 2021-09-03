@@ -2,7 +2,7 @@ $('.btn-arrow-toggle').on('click', function (e) {
     e.preventDefault();
     $('.footer-box h3').removeClass('click');
     $('.footer-box__body').slideUp();
-    $(this).parent().toggleClass('click').siblings('.footer-box__body').slideToggle();
+    $(this).parent().addClass('click').siblings('.footer-box__body').slideDown();
 });
 
 // $('.menu-main__list li a').each(function () {
