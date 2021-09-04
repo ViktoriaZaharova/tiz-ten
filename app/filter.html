@@ -30,6 +30,7 @@
 
 <body>
 
+
 <div class="mobile-menu">
   <ul class="mobile-menu__list">
     <li class="dropdown-item">
@@ -817,7 +818,8 @@
               <h4>Номера телефонов:</h4>
               <div class="phone-wrapper">
                 <a href="tel:+74993912732" class="phone-my">8 (499) 391-27-32, </a>
-                <a href="whatsapp://send?phone=+79777157594" class="phone-my">8 (977) 715-75-94 <span class="links-messenger__icon"><img src="img/whatsapp.svg" alt=""></span>
+                <a href="whatsapp://send?phone=+79777157594" class="phone-my">8 (977) 715-75-94 <span
+                    class="links-messenger__icon"><img src="img/whatsapp.svg" alt=""></span>
                   <span class="links-messenger__text">WhatsApp</span></a>
               </div>
             </div>
@@ -862,54 +864,88 @@
 
 </header>
 
-<section class="section-page">
+<section class="section-page product-page model-page filter-page">
   <div class="container">
-    <div class="contacts-wrapper w-100 section-wrapper">
-      <h3>Контакты</h3>
-      <div class="contacts-box">
-        <h4>Номера телефонов:</h4>
-        <div class="phone-wrapper">
-          <a href="tel:+74993912732" class="phone-my">8 (499) 391-27-32 </a>
-          <a href="whatsapp://send?phone=+79777157594" class="phone-my">8 (977) 715-75-94 <span class="links-messenger__icon"><img src="img/whatsapp.svg" alt=""></span>
-            <span class="links-messenger__text">WhatsApp</span></a>
+    <div class="breadcrumbs">
+      <div class="breadcrumbs-button">
+        <div class="breadcrumbs-button__text">Главная</div>
+        <div class="breadcrumbs-button__icon"><img src="img/arrow-bottom.svg" alt=""></div>
+      </div>
+      <ul class="breadcrumb">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Запчасти для водонагревателей </a></li>
+        <li><span>Запчасти для водонагревателей Термекс</span></li>
+      </ul>
+    </div>
+
+
+    <h1>ТЭНы для водонагревателей</h1>
+
+    <ul class="list-brands">
+      <li><a href="#"><img src="img/brand1.png" alt=""></a></li>
+      <li><a href="#"><img src="img/brand2.png" alt=""></a></li>
+      <li><a href="#"><img src="img/brand3.jpeg" alt=""></a></li>
+      <li><a href="#"><img src="img/brand4.png" alt=""></a></li>
+      <li><a href="#"><img src="img/brand9.png" alt=""></a></li>
+      <li><a href="#"><img src="img/brand5.png" alt=""></a></li>
+      <li><a href="#"><img src="img/brand6.png" alt=""></a></li>
+      <li><a href="#"><img src="img/brand7.png" alt=""></a></li>
+      <li><a href="#"><img src="img/brand8.png" alt=""></a></li>
+    </ul>
+
+
+    <form method="post" class="form-filter">
+      <label>
+        <select name="state" class="select-filter js-example-basic-single" data-placeholder="Модель водонагревателя">
+          <option value=""></option>
+          <option value="Модель водонагревателя">Модель водонагревателя</option>
+          <option value="Ariston">Ariston</option>
+          <option value="Модель водонагревателя">Модель водонагревателя</option>
+        </select>
+      </label>
+      <label>
+        <select name="state" class="select-filter js-example-basic-single" data-placeholder="Мощьность ТЭНа">
+          <option value=""></option>
+          <option value="Мощьность ТЭНа">Мощьность ТЭНа</option>
+          <option value="2000">2000</option>
+          <option value="Мощьность ТЭНа">Мощьность ТЭНа</option>
+        </select>
+      </label>
+      <button type="submit" class="btn btn-white btn-clear">Сбрость фильтр</button>
+    </form>
+
+    <div class="section-wrapper w-100">
+      <div class="spares-card">
+        <a href="#" class="spares-card__img"><img src="img/category-product1.jpeg" alt=""></a>
+        <div class="spares-card__body">
+          <div class="spares-card__price">1900 <span class="currency">руб.</span></div>
+          <div class="spares-card__article">Код - К52</div>
+          <a href="#" class="spares-card__title">ТЭНы из нержавейки</a>
+          <a href="#" class="btn btn-accent">В корзину</a>
         </div>
       </div>
-
-      <div class="contacts-box">
-        <h4>Электронная почта:</h4>
-        <a href="mailto:tvoiservis@mail.ru" class="mail-my">tvoiservis@mail.ru</a>
-      </div>
-
-      <div class="contacts-box">
-        <h4>Режим работы:</h4>
-        <p>Пн - Ср 9:00 - 19:00, Чт, Пт 9:00 - 18:00, Сб, Вс 900 - 16:00</p>
-      </div>
-      <div class="contacts-box">
-        <h4>Адрес магазина - пункта самовывоза</h4>
-        <p>г. Москва, м. Коломенская, ул.Нагатинская, д.31</p>
-        <div class="box-text">
-          <p>Первый вагон из центра, выход из метро №4 на ул.Нагатинская. Далее 200 м от метро. Вход
-            в магазин через аптеку Ригла.
-            Перед тем как приехать в точку самовывоза, обязательно уточняйте
-            наличие товара.
-          </p>
+      <div class="spares-card">
+        <a href="#" class="spares-card__img"><img src="img/category-product1.jpeg" alt=""></a>
+        <div class="spares-card__body">
+          <div class="spares-card__price">1900 <span class="currency">руб.</span></div>
+          <div class="spares-card__article">Код - К52</div>
+          <a href="#" class="spares-card__title">ТЭНы из нержавейки</a>
+          <a href="#" class="btn btn-accent">В корзину</a>
         </div>
-
-        <div class="map-box"><img src="img/map-img.jpg" alt=""></div>
       </div>
-
-      <div class="contacts-box">
-        <h4>Уважаемые покупатели!</h4>
-        <div class="box-text">
-          <p>Вы можете получить Ваш заказ более чем в двухстах пунктах выдачи заказов по Москве, Московской
-            области, Санкт-Петербургу и регионам России.</p>
-          <p>Пункт выдачи заказа и способ доставки Вы можете выбрать при оформлении заказа или в разделе
-            доставка.</p>
+      <div class="spares-card">
+        <a href="#" class="spares-card__img"><img src="img/category-product1.jpeg" alt=""></a>
+        <div class="spares-card__body">
+          <div class="spares-card__price">1900 <span class="currency">руб.</span></div>
+          <div class="spares-card__article">Код - К52</div>
+          <a href="#" class="spares-card__title">ТЭНы из нержавейки</a>
+          <a href="#" class="btn btn-accent">В корзину</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 <footer>
@@ -932,6 +968,7 @@
 
         <a href="#" class="yandex-links"><img src="img/yandex.jpeg" alt=""></a>
       </div>
+
 
       <a href="#" class="btn-mobile btn-border-red btn">Карта пунктов выдачи</a>
       <div class="footer-box">
