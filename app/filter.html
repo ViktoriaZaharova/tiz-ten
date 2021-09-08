@@ -381,7 +381,8 @@
 </div>
 
 <!--header-->
-<div data-include="header"></div>
+<?php include "views/header.html" ?>
+<!--<div data-include="header"></div>-->
 <!--header-->
 
 <section class="section-page product-page model-page filter-page">
@@ -393,8 +394,7 @@
       </div>
       <ul class="breadcrumb">
         <li><a href="#">Главная</a></li>
-        <li><a href="#">Запчасти для водонагревателей </a></li>
-        <li><span>Запчасти для водонагревателей Термекс</span></li>
+        <li><a href="#" class="breadcrumb-page">Запчасти для водонагревателей</a></li>
       </ul>
     </div>
 
@@ -468,102 +468,7 @@
   </div>
 </section>
 
-
-
-<footer>
-  <div class="footer-top">
-    <div class="container">
-      <div class="footer-box footer-box-first">
-        <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
-        <div class="header-item-address header-item-address__loc">
-          <svg class="svg-icon">
-            <use xlink:href="img/sprite.svg#location"></use>
-          </svg>
-          <div class="header-item__text">Москва, ул. Нагатинская, 31</div>
-        </div>
-        <a href="#" class="header-item-address header-item-address__point">
-          <svg class="svg-icon">
-            <use xlink:href="img/sprite.svg#map"></use>
-          </svg>
-          <div class="header-item__text">Пункты выдачи</div>
-        </a>
-
-        <a href="#" class="yandex-links"><img src="img/yandex.jpeg" alt=""></a>
-      </div>
-
-
-      <a href="#" class="btn-mobile btn-border-red btn">Карта пунктов выдачи</a>
-      <div class="footer-box">
-        <h3>Информация <a href="#" class="btn-arrow-toggle">
-          <svg class="svg-icon">
-            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
-          </svg>
-        </a></h3>
-        <div class="footer-box__body">
-          <ul class="footer-menu">
-            <li><a href="#">О Компании</a></li>
-            <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">Возврат и обмен товара</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Юридическим лицам</a></li>
-            <li><a href="#">Сотрудничество с мастерами</a></li>
-            <li><a href="#">Поставщикам</a></li>
-            <li><a href="#">Полезные статьи</a></li>
-            <li><a href="#">Карта сайта</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-box">
-        <h3>Каталог запчастей <a href="#" class="btn-arrow-toggle">
-          <svg class="svg-icon">
-            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
-          </svg>
-        </a></h3>
-        <div class="footer-box__body">
-          <ul class="footer-menu">
-            <li><a href="#">Водонагреватели</a></li>
-            <li><a href="#">Электрокотлы</a></li>
-            <li><a href="#">Электрокаменки</a></li>
-            <li><a href="#">Стиральные машины</a></li>
-            <li><a href="#">Аппараты для шаурмы</a></li>
-            <li><a href="#">Фритюрницы</a></li>
-            <li><a href="#">Электроплиты</a></li>
-            <li><a href="#">Тэны для отопления</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-box">
-        <h3>Контакты <a href="#" class="btn-arrow-toggle">
-          <svg class="svg-icon">
-            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
-          </svg>
-        </a></h3>
-        <div class="footer-box__body">
-          <a href="tel:+74993912732" class="phone">8 (499) 391-27-32</a>
-          <a href="tel:+79777157294" class="phone">8 (977) 715-72-94</a>
-          <a href="mailto:tvoiservis@mail.ru" class="mail">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#mail"></use>
-            </svg>
-            <span class="mail-text">tvoiservis@mail.ru</span>
-          </a>
-          <ul class="list-social">
-            <li><a href="#"><img src="img/vk.svg" alt=""></a></li>
-            <li><a href="#"><img src="img/whatsapp.svg" alt=""></a></li>
-            <li><a href="#"><img src="img/callback.svg" alt=""></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="copyright">© 2012 – 2021 «ТизТэн». Все права защищены.</div>
-    </div>
-  </div>
-</footer>
+<div data-include="footer"></div>
 
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

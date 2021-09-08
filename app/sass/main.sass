@@ -1009,7 +1009,7 @@ footer
 
 
 .section-page
-  padding: 30px 0 60px
+  padding: 22px 0 60px
 
 .delivery-list
   li
@@ -1033,7 +1033,7 @@ footer
 .breadcrumbs
   width: 100%
   position: relative
-  margin: 0 0 20px
+  margin: 0 0 38px
 
 .breadcrumbs-button
   padding: 12px 8px 12px 0
@@ -1080,13 +1080,17 @@ footer
 
       &:hover
         color: $accent
+    .breadcrumb-page
+      color: $accent
+      &:after
+        display: none
 
 .slick-slide
   outline: none
 
 //product
 .product-page
-  padding: 18px 0 30px
+  padding: 22px 0 8px
 
   .section-wrapper
     width: 100%
@@ -1327,7 +1331,11 @@ footer
 
 .links-details
   color: #525252
-  text-decoration: underline
+  width: fit-content
+  border-bottom: 1px solid #525252
+  margin: 10px 0 0
+  &:hover
+    border-color: transparent
 
 .price-card-mob
   display: none
@@ -1562,7 +1570,7 @@ footer
   color: #5F5F5F
   font-size: 16px
   font-family: $default-font
-  padding: 0 40px 0 26px
+  padding: 0 40px 0 19px
 
 .select2-container--default .select2-selection--single .select2-selection__arrow
   background: url("../img/arrow-bottom.svg") no-repeat center
@@ -1583,10 +1591,60 @@ footer
   display: flex
   align-items: center
   justify-content: space-between
+  border: 1px solid #C2C2C2
+    radius: 5px
 
 .select2-container--default .select2-selection--single .select2-selection__clear
   order: 1
+  width: 20px
+  height: 20px
   margin: 0 40px 0 auto
+  background: url("../img/close.svg") no-repeat center
+    size: 100%
+  span
+    display: none
+
+.select2-results__option
+  padding: 8px 15px
+  font-size: 16px
+  color: #5F5F5F
+  font-family: $default-font
+  transition: .3s ease
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder
+  font-size: 16px
+  font-family: $default-font
+  color: #5F5F5F
+
+.select2-container--default .select2-search--dropdown .select2-search__field
+  border: 1px solid #C2C2C2
+    radius: 5px
+  height: 51px
+  padding: 0 19px
+
+.select2-container--open .select2-dropdown--below
+  margin: 10px 0 0
+  background: #fff
+  box-sizing: content-box
+  box-shadow: 1px 1px 5px rgba(198,203,203, .5)
+  border: none
+    radius: .5rem
+  padding: 10px 0
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
+  color: $accent
+  background: transparent
+
+.select2-container--default .select2-results__option--selected
+  background: transparent
+  font-weight: 500
+  color: $accent
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple
+  border-radius: 5px
+
+.select2-hidden-accessible
+  width: 100%
 
 @import "media"
 // Всегда в конце
