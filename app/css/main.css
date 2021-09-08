@@ -533,6 +533,8 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
     margin: 0 6px 0 0; }
+  .header-item-address:hover {
+    color: #F50706; }
 
 .header-item-address__loc .svg-icon {
   width: 15px;
@@ -1470,7 +1472,8 @@ footer {
   border-bottom: 1px solid #525252;
   margin: 10px 0 0; }
   .links-details:hover {
-    border-color: transparent; }
+    border-color: transparent;
+    color: #F50706; }
 
 .price-card-mob {
   display: none; }
@@ -1512,6 +1515,8 @@ footer {
       width: 100%;
       text-align: center;
       color: #000000; }
+      .spare-parts-list li a:hover {
+        color: #F50706; }
 
 .spare-parts-page__img {
   margin: 30px auto 45px;
@@ -1606,6 +1611,8 @@ footer {
 
 .result-filter-products__list li a {
   color: #000; }
+  .result-filter-products__list li a:hover {
+    color: #F50706; }
 
 .model-gallery {
   max-width: 500px; }
@@ -1675,6 +1682,8 @@ footer {
     color: #525252;
     font-size: 18px;
     margin: 0 0 14px; }
+    .spares-card__title:hover {
+      color: #F50706; }
 
 .filter-page h1 {
   font-size: 40px;
@@ -1848,6 +1857,149 @@ footer {
 
 .select2-hidden-accessible {
   width: 100%; }
+
+.modal__div {
+  position: fixed;
+  max-width: 600px;
+  width: 100%;
+  height: 100%;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 101;
+  overflow: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+  opacity: 0; }
+
+.modal__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+  .modal__close img {
+    margin: 0;
+    width: 100%; }
+
+.modal__wrapper {
+  background: #f5f5f5;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  margin: 50px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px; }
+  .modal__wrapper h2 {
+    margin: 0;
+    font-size: 24px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
+
+.modal-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 40px 20px;
+  border-bottom: 1px solid #C2C2C2; }
+
+.modal-body {
+  width: 100%;
+  padding: 20px 40px 30px; }
+
+.form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .form input {
+    height: 51px;
+    width: 100%;
+    border: 1px solid #C2C2C2;
+      border-radius: 5px;
+    padding: 0 19px; }
+  .form .error-input {
+    border-color: #F50706; }
+  .form label {
+    width: 48%;
+    margin: 0 0 20px; }
+  .form .label-message {
+    width: 100%; }
+  .form .btn {
+    margin: 0 auto; }
+  .form textarea {
+    height: 100px;
+    border: 1px solid #C2C2C2;
+      border-radius: 5px;
+    padding: 10px 19px; }
+
+.input-title {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0 0 5px; }
+
+.error-box {
+  width: 100%;
+  margin: 10px 0 0;
+  font-size: 12px; }
+
+.overlay {
+  z-index: 100;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+  filter: alpha(opacity=50);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none; }
 
 /*==========  Desktop First  ==========*/
 @media only screen and (max-width: 1200px) {
@@ -2323,4 +2475,10 @@ footer {
     right: -12px;
     top: -10px; }
   .displacement-list li a {
-    font-size: 15px; } }
+    font-size: 15px; }
+  .modal-header, .modal-body {
+    padding: 20px; }
+  .modal__wrapper h2 {
+    font-size: 20px; }
+  .form label {
+    width: 100%; } }

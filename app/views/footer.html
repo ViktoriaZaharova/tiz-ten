@@ -3,12 +3,12 @@
     <div class="container">
       <div class="footer-box footer-box-first">
         <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
-        <div class="header-item-address header-item-address__loc">
+        <a href="#" class="header-item-address header-item-address__loc">
           <svg class="svg-icon">
             <use xlink:href="img/sprite.svg#location"></use>
           </svg>
-          <div class="header-item__text">Москва, ул. Нагатинская, 31</div>
-        </div>
+          <span class="header-item__text">Москва, ул. Нагатинская, 31</span>
+        </a>
         <a href="#" class="header-item-address header-item-address__point">
           <svg class="svg-icon">
             <use xlink:href="img/sprite.svg#map"></use>
@@ -71,12 +71,12 @@
         <div class="footer-box__body">
           <a href="tel:+74993912732" class="phone">8 (499) 391-27-32</a>
           <a href="tel:+79777157294" class="phone">8 (977) 715-72-94</a>
-          <a href="mailto:tvoiservis@mail.ru" class="mail">
+          <div class="mail">
             <svg class="svg-icon">
               <use xlink:href="img/sprite.svg#mail"></use>
             </svg>
             <span class="mail-text">tvoiservis@mail.ru</span>
-          </a>
+          </div>
           <ul class="list-social">
             <li><a href="#"><img src="img/vk.svg" alt=""></a></li>
             <li><a href="#"><img src="img/whatsapp.svg" alt=""></a></li>
@@ -92,3 +92,12 @@
     </div>
   </div>
 </footer>
+
+<script>
+    $('.btn-arrow-toggle').on('click', function (e) {
+        e.preventDefault();
+        $('.footer-box h3').removeClass('click');
+        $('.footer-box__body').slideUp();
+        $(this).parent().addClass('click').siblings('.footer-box__body').slideDown();
+    });
+</script>
