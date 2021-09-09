@@ -1418,8 +1418,6 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #C2C2C2; }
-  .accessories-card:first-child {
-    border-top: 1px solid #C2C2C2; }
   .accessories-card__img {
     height: 170px;
     width: 259px;
@@ -1463,6 +1461,11 @@ footer {
     font-size: 20px;
     font-weight: 500;
     margin: 0 auto 15px; }
+
+.line-card {
+  width: 100%;
+  height: 1px;
+  background: #C2C2C2; }
 
 .links-details {
   color: #525252;
@@ -2433,6 +2436,12 @@ footer {
   .form-filter label:last-child {
     margin: 0; }
   .form-filter button {
+    display: none; }
+  .card-50 {
+    width: 48%; }
+    .card-50 .accessories-card {
+      width: 100%; }
+  .line-card {
     display: none; } }
 
 @media only screen and (max-width: 480px) {
