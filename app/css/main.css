@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -494,6 +495,8 @@ header {
     width: 17px;
     height: 17px;
     margin: 0 4px 0 0; }
+  .links-messenger:hover {
+    color: #F50706; }
   .links-messenger__icon {
     width: 20px;
     height: 20px; }
@@ -1092,6 +1095,9 @@ footer {
 .section-page {
   padding: 22px 0 60px; }
 
+.delivery-page, .contacts-page {
+  padding: 54px 0 50px; }
+
 .delivery-list li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1177,10 +1183,8 @@ footer {
       height: 16px; }
     .breadcrumb li a:hover {
       color: #F50706; }
-  .breadcrumb li .breadcrumb-page {
-    color: #F50706; }
-    .breadcrumb li .breadcrumb-page:after {
-      display: none; }
+  .breadcrumb li .breadcrumb-page:after {
+    display: none; }
 
 .slick-slide {
   outline: none; }
@@ -1452,7 +1456,6 @@ footer {
       max-height: 40px;
       overflow: hidden; }
   .accessories-card .box-text {
-    min-height: 48px;
     line-height: 24px; }
   .accessories-card .btn {
     margin: 0 0 0 auto; }
@@ -1689,7 +1692,6 @@ footer {
       color: #F50706; }
 
 .filter-page h1 {
-  font-size: 40px;
   margin: 0 0 58px; }
 
 .list-brands {
@@ -2004,6 +2006,177 @@ footer {
   cursor: pointer;
   display: none; }
 
+.list-category-ten {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .list-category-ten li {
+    margin: 0 0 10px; }
+    .list-category-ten li a {
+      width: 76px;
+      height: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      text-align: center;
+      background: #EEEEEE;
+      color: #5F5F5F;
+      border: 1px solid #C2C2C2;
+        border-radius: 5px; }
+      .list-category-ten li a:hover {
+        color: #F50706;
+        border-color: #F50706; }
+
+.article-box {
+  margin: 0 0 40px; }
+  .article-box h3 {
+    font-weight: 600;
+    margin: 30px 0;
+    font-size: 24px; }
+  .article-box h4 {
+    text-align: center;
+    font-weight: 600;
+    margin: 20px auto;
+    font-size: 20px; }
+  .article-box:last-child {
+    margin: 0; }
+
+.image-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%; }
+  .image-wrapper .image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0 30px; }
+
+.table {
+  width: 100%; }
+  .table td {
+    border: 1px solid #C2C2C2;
+    vertical-align: middle;
+    padding: 20px; }
+    .table td:first-child, .table td:nth-child(2) {
+      text-align: center; }
+    .table td:last-child {
+      width: 50%; }
+    .table td:first-child {
+      width: 15%; }
+  .table thead {
+    background: #F0F0F0;
+    text-align: center; }
+  .table th {
+    padding: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    vertical-align: middle;
+    border: 1px solid #C2C2C2; }
+
+.list-dots {
+  list-style: disc;
+  padding: 0 0 0 20px; }
+
+.all-article {
+  margin: 30px auto;
+  font-weight: 500;
+  text-align: center;
+  width: 100%; }
+
+.form-calculate {
+  margin: 0 auto 40px;
+  max-width: 770px;
+  width: 100%;
+  border-radius: 10px;
+  background: #FAFAFA;
+  padding: 40px; }
+  .form-calculate label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 0 13px; }
+  .form-calculate input {
+    padding: 0 10px;
+    width: 271px;
+    height: 51px;
+    border: 1px solid #C2C2C2;
+      border-radius: 5px;
+    background: #fff; }
+  .form-calculate button {
+    width: 271px; }
+  .form-calculate .error-input {
+    border-color: #F50706; }
+
+.btn-clear {
+  margin: 0 0 0 20px;
+  padding: 0 28px; }
+
+.input-description {
+  width: calc(100% - 271px);
+  padding: 0 0 0 21px;
+  color: #000000; }
+
+.btn-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .btn-group .btn {
+    margin: 0 0 13px; }
+  .btn-group .btn-clear {
+    margin: 0 0 13px 20px; }
+
+.btn-grey {
+  border: 1px solid #C2C2C2;
+    border-radius: 5px;
+  background: #EBEBEB;
+  height: 51px;
+  font-size: 16px;
+  color: #000;
+  font-weight: 500; }
+  .btn-grey:hover {
+    background: #F50706;
+    color: #fff; }
+
 /*==========  Desktop First  ==========*/
 @media only screen and (max-width: 1200px) {
   .form-search-wrap {
@@ -2138,8 +2311,7 @@ footer {
   .form-filter {
     margin: 0; }
   .filter-page h1 {
-    margin: 0 0 30px;
-    font-size: 36px; }
+    margin: 0 0 30px; }
   .form-filter {
     padding: 30px 0 20px; }
     .form-filter label {
@@ -2188,7 +2360,10 @@ footer {
   .spare-parts-list li {
     width: 25%; }
   .spare-parts-page__img {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .table th, .table td {
+    font-size: 15px;
+    padding: 10px; } }
 
 @media only screen and (max-width: 670px) {
   .spare-parts-page__img {
@@ -2335,7 +2510,7 @@ footer {
   .section-wrapper h3 {
     font-size: 22px; }
   .breadcrumbs {
-    margin: 0 0 20px; }
+    margin: 0 0 7px; }
   .tabs__caption li {
     padding: 7px; }
   .spare-parts-list li {
@@ -2422,8 +2597,6 @@ footer {
         display: none; }
   .spares h2 {
     display: none; }
-  .filter-page h1 {
-    font-size: 30px; }
   .list-brands li {
     width: 33.3%; }
     .list-brands li a {
@@ -2442,7 +2615,60 @@ footer {
     .card-50 .accessories-card {
       width: 100%; }
   .line-card {
-    display: none; } }
+    display: none; }
+  .delivery-page, .contacts-page {
+    padding: 30px 0 40px; }
+  .table-article thead {
+    display: none; }
+  .table-article tbody {
+    display: block; }
+  .table-article tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .table-article tr td {
+      margin: 0 0 -1px;
+      width: 100%; }
+      .table-article tr td:before {
+        content: '';
+        display: block;
+        margin: 0 0 10px;
+        width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: left; }
+      .table-article tr td:first-child, .table-article tr td:last-child {
+        width: 100%;
+        text-align: left; }
+      .table-article tr td:nth-child(2) {
+        text-align: left; }
+      .table-article tr td:first-child:before {
+        content: 'Код ошибки'; }
+      .table-article tr td:nth-child(2):before {
+        content: 'Описание ошибки'; }
+      .table-article tr td:last-child:before {
+        content: 'Действие'; }
+  .article-box h3 {
+    margin: 20px 0;
+    font-size: 22px; }
+  .input-description {
+    margin: 10px 0 0;
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 0; }
+  .form-calculate {
+    padding: 20px; }
+    .form-calculate input {
+      width: 100%; }
+    .form-calculate button {
+      width: 100%; }
+  .btn-group .btn-clear {
+    width: 100%;
+    margin: 0 0 20px; } }
 
 @media only screen and (max-width: 480px) {
   .category-box {
@@ -2490,4 +2716,10 @@ footer {
   .modal__wrapper h2 {
     font-size: 20px; }
   .form label {
-    width: 100%; } }
+    width: 100%; }
+  .delivery-list li p {
+    width: 100%; }
+  .delivery-list li span {
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 0; } }

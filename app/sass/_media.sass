@@ -161,7 +161,6 @@
 
   .filter-page h1
     margin: 0 0 30px
-    font-size: 36px
 
   .form-filter
     padding: 30px 0 20px
@@ -222,6 +221,11 @@
 
   .spare-parts-page__img
     font-size: 14px
+
+  .table
+    th, td
+      font-size: 15px
+      padding: 10px
 
 @media only screen and (max-width: 670px)
   .spare-parts-page__img
@@ -376,7 +380,7 @@
     font-size: 22px
 
   .breadcrumbs
-    margin: 0 0 20px
+    margin: 0 0 7px
 
 
   .tabs__caption li
@@ -466,8 +470,6 @@
     h2
       display: none
 
-  .filter-page h1
-    font-size: 30px
 
   .list-brands
     li
@@ -494,6 +496,65 @@
 
   .line-card
     display: none
+
+  .delivery-page, .contacts-page
+    padding: 30px 0 40px
+
+  .table-article
+    thead
+      display: none
+    tbody
+      display: block
+    tr
+      display: flex
+      flex-wrap: wrap
+      td
+        margin: 0 0 -1px
+        width: 100%
+        
+        &:before
+          content: ''
+          display: block
+          margin: 0 0 10px
+          width: 100%
+          font-weight: 500
+          font-size: 16px
+          text-align: left
+        &:first-child, &:last-child
+          width: 100%
+          text-align: left
+        &:nth-child(2)
+          text-align: left
+        &:first-child
+          &:before
+            content: 'Код ошибки'
+        &:nth-child(2)
+          &:before
+            content: 'Описание ошибки'
+        &:last-child
+          &:before
+            content: 'Действие'
+
+  .article-box h3
+    margin: 20px 0
+    font-size: 22px
+
+  .input-description
+    margin: 10px 0 0
+    width: 100%
+    order: 1
+    padding: 0
+
+  .form-calculate
+    padding: 20px
+    input
+      width: 100%
+    button
+      width: 100%
+
+  .btn-group .btn-clear
+    width: 100%
+    margin: 0 0 20px
 
 @media only screen and (max-width: 480px)
   .category-box
@@ -560,3 +621,11 @@
 
   .form label
     width: 100%
+
+  .delivery-list li
+    p
+      width: 100%
+    span
+      width: 100%
+      margin: 10px 0 0
+      padding: 0

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+  <meta charset="utf-8">
+  <title>ТизТэн</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+<!--header + mobile menu-->
+<div data-include="header"></div>
+<!--header-->
+
+<section class="section-page product-page model-page filter-page">
+  <div class="container">
+    <div class="breadcrumbs">
+      <div class="breadcrumbs-button">
+        <div class="breadcrumbs-button__text">Главная</div>
+        <div class="breadcrumbs-button__icon"><img src="img/arrow-bottom.svg" alt=""></div>
+      </div>
+      <ul class="breadcrumb">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">ТЭНы с резьбой</a></li>
+        <li><a href="#" class="breadcrumb-page">ТЭНы с терморегулятором</a></li>
+      </ul>
+    </div>
+
+
+    <h1>Калькулятор расчета необходимой мощности
+      для нагрева воды</h1>
+
+    <form method="post" class="form-calculate">
+      <label><input type="text" class="error-input"><span
+          class="input-description">Масса нагреваемой воды, (количество литров)</span>
+      <span class="error-box color-accent">Количество литров должно быть больше 1</span>
+      </label>
+      <label><input type="text" class="error-input"><span
+          class="input-description">Начальная температура воды, °С</span>
+      <span class="error-box color-accent">Начальная температура должна быть меньше конечной</span>
+      </label>
+      <label><input type="text" class="error-input"><span
+          class="input-description">Конечная температура воды, °С</span>
+        <span class="error-box color-accent">Температура должна быть больше 1 C</span>
+      </label>
+      <label><input type="text"><span
+          class="input-description">Желаемое время нагрева воды, мин</span>
+      </label>
+      <div class="btn-group">
+        <button class="btn btn-grey" type="submit">Рассчитать мощность ТЭНа</button>
+        <a href="#" class="btn btn-grey btn-clear">Сброс</a>
+      </div>
+      <label><input type="text"><span
+          class="input-description">Необходимая мощность ТЭНа, кВт</span></label>
+    </form>
+
+
+    <form method="post" class="form-filter">
+      <label>
+        <select name="state" class="select-filter js-example-basic-single" data-placeholder="Модель водонагревателя">
+          <option value=""></option>
+          <option value="Модель водонагревателя">Модель водонагревателя</option>
+          <option value="Ariston">Ariston</option>
+          <option value="Модель водонагревателя">Модель водонагревателя</option>
+        </select>
+      </label>
+      <label>
+        <select name="state" class="select-filter js-example-basic-single" data-placeholder="Мощьность ТЭНа">
+          <option value=""></option>
+          <option value="Мощьность ТЭНа">Мощьность ТЭНа</option>
+          <option value="2000">2000</option>
+          <option value="Мощьность ТЭНа">Мощьность ТЭНа</option>
+        </select>
+      </label>
+      <button type="submit" class="btn btn-white btn-clear">Сбрость фильтр</button>
+    </form>
+
+  </div>
+</section>
+
+<div data-include="footer"></div>
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>
