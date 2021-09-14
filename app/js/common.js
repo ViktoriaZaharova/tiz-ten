@@ -21,6 +21,14 @@ $('.gallery-product-max').slick({
     dots: false,
     asNavFor: '.gallery-product-preview',
     focusOnSelect: true,
+    responsive: [
+        {
+            breakpoint: 576,
+            settings: {
+                dots: true,
+            }
+        }
+    ]
 });
 
 $('.gallery-product-preview').slick({

@@ -214,6 +214,14 @@ button
   height: 20px
   fill: #B0B0B0
 
+.d-flex
+  display: flex
+
+.flex-wrap
+  flex-wrap: wrap
+
+
+
 //header
 header
   padding: 16px 0 0
@@ -1519,6 +1527,16 @@ footer
     margin: 0 0 14px
     &:hover
       color: $accent
+  &__category
+    margin: 0 0 19px
+    width: 100%
+    font-size: 20px
+    font-weight: 600
+    text-transform: uppercase
+    color: $accent
+  &__text
+    display: none
+
 
 //filter-page
 .filter-page
@@ -1906,6 +1924,59 @@ footer
     background: $accent
     color: #fff
 
+//product2
+.product-characteristics
+  width: 100%
+
+.table-characteristics
+  font-size: 18px
+  thead
+    background: #F5F5F5
+    font-weight: 600
+  th, td
+    text-align: center
+    padding: 11px 15px
+    &:first-child
+      text-align: left
+  tbody
+    tr
+      &:nth-child(even)
+        background: #F5F5F5
+  td
+    &:nth-child(2), &:first-child
+      text-align: left
+    &:first-child
+      font-weight: 500
+
+.check-icon
+  display: flex
+  align-items: center
+  justify-content: center
+
+.slick-dots
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  margin: 0 auto
+  width: 100%
+  bottom: 0
+  li
+    cursor: pointer
+    transition: .4s ease
+    width: 10px
+    height: 10px
+    border: 1px solid #333
+      radius: 50%
+    background: #333
+    margin: 0 10px 0 0
+    &:last-child
+      margin: 0
+    button
+      display: none
+  .slick-active
+    background: $accent
+    border-color: $accent
 
 @import "media"
 // Всегда в конце
