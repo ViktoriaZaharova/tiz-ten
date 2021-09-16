@@ -529,8 +529,12 @@
         &:nth-child(2)
           text-align: left
         &:first-child
+          background: #F0F0F0
           &:before
             content: 'Код ошибки'
+            width: fit-content
+            margin: 0 10px 0 0
+            display: inline-block
         &:nth-child(2)
           &:before
             content: 'Описание ошибки'
@@ -571,23 +575,28 @@
     margin: 0
     padding: 10px 0 15px
     border-bottom: 1px solid #C2C2C2
+    justify-content: space-between
     .spares-card__category
       font-size: 15px
       margin: 0 0 10px
+      text-align: left
+      max-width: none
     .spares-card__img
-      width: 100px
+      width: 48.5%
       margin: 0
-      padding: 0 0 30px
-      height: 110px
+      height: 160px
     .spares-card__body
-      padding: 0 0 0 10px
-      width: calc(100% - 100px)
+      padding: 0
+      width: 48.5%
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      .btn
+        order: 1
     .spares-card__price
-      position: absolute
+      order: 1
       width: 100px
-      left: 0
-      text-align: center
-      bottom: 15px
+      margin: 5px 0
     .spares-card__article, .spares-card__title
       display: none
     .spares-card__text
@@ -681,7 +690,16 @@
       margin: 10px 0 0
       padding: 0
 
+  .spares-card-two
+    justify-content: space-between
+    .spares-card__img
+      width: 48.5%
+    .spares-card__body
+      width: 48.5%
+      padding: 0
+
 @media only screen and (max-width: 360px)
   .section-wrapper-category
     height: 210px
+
 
