@@ -134,7 +134,8 @@ h1, h2 {
   font-size: 36px;
   font-weight: bold;
   width: 100%;
-  margin: 0 0 40px; }
+  margin: 0 0 22px;
+  font-family: "Montserrat", sans-serif; }
 
 .w-100 {
   width: 100%; }
@@ -1129,7 +1130,7 @@ footer {
 .breadcrumbs {
   width: 100%;
   position: relative;
-  margin: 0 0 38px; }
+  margin: 0 0 22px; }
 
 .breadcrumbs-button {
   padding: 12px 8px 12px 0;
@@ -1306,7 +1307,7 @@ footer {
 .price-product {
   color: #F50706;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0 47px 0 0; }
 
 .gallery-product-max__item {
@@ -1447,6 +1448,7 @@ footer {
       max-height: 100%; }
   .accessories-card .article {
     width: 20%;
+    font-size: 18px;
     text-align: center; }
   .accessories-card__body {
     width: 45%; }
@@ -1471,7 +1473,7 @@ footer {
   .accessories-card .price {
     color: #F50706;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0 auto 15px; }
 
 .line-card {
@@ -1558,8 +1560,8 @@ footer {
   .displacement h4 {
     width: 100%;
     margin: 0 0 40px;
-    font-size: 28px;
-    font-weight: 500; }
+    font-size: 26px;
+    font-weight: 600; }
 
 .displacement-list {
   width: 100%;
@@ -1696,7 +1698,9 @@ footer {
   .spares-card__title {
     color: #525252;
     font-size: 18px;
-    margin: 0 0 14px; }
+    margin: 0 0 14px;
+    max-height: 22px;
+    overflow: hidden; }
     .spares-card__title:hover {
       color: #F50706; }
   .spares-card__category {
@@ -1710,6 +1714,14 @@ footer {
     max-width: 330px; }
   .spares-card__text {
     display: none; }
+
+.select-filter-model {
+  margin: 0 0 10px;
+  max-width: 280px;
+  width: 100%; }
+  .select-filter-model .select2-container--open .select2-selection__arrow {
+    -webkit-transform: rotate(180deg) translate(0, 40%);
+            transform: rotate(180deg) translate(0, 40%); }
 
 .filter-page h1 {
   margin: 0 0 58px; }
@@ -1725,7 +1737,7 @@ footer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   .list-brands li {
-    width: 20%;
+    width: 16.6%;
     margin: 0 0 23px; }
     .list-brands li a {
       display: -webkit-box;
@@ -1737,38 +1749,29 @@ footer {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      max-width: 140px; }
+      max-width: 140px;
+      color: #000;
+      font-weight: 600;
+      font-size: 20px; }
 
 .form-filter {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 26px 0;
   position: relative;
   z-index: 1;
   margin: 27px 0 0; }
-  .form-filter:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-    width: 3000px;
-    height: 100%;
-    background: #EEEEEE;
-    z-index: -1; }
   .form-filter label {
-    width: calc(42.5% - 30px); }
+    width: calc(40% - 30px); }
 
 .btn-white {
   color: #5F5F5F;
@@ -2167,7 +2170,8 @@ footer {
 
 .btn-clear {
   margin: 0 0 0 20px;
-  padding: 0 28px; }
+  padding: 0 28px;
+  width: 200px; }
 
 .input-description {
   width: calc(100% - 271px);
@@ -2412,9 +2416,11 @@ footer {
     width: 50%; }
   h1, h2 {
     font-size: 22px;
-    margin: 0 0 20px; }
+    margin: 0 0 22px; }
   .header-box, .header-menu {
     display: none; }
+  .product-page h1, .product-page h2 {
+    margin: 0 0 10px; }
   header {
     padding: 15px 0 0; }
     header .d-mobile {
@@ -2452,7 +2458,11 @@ footer {
     font-size: 15px;
     padding: 10px; }
   .table-characteristics {
-    font-size: 13px; } }
+    font-size: 13px; }
+  .select-filter-model {
+    max-width: 180px; }
+    .select-filter-model .select2-container--default .select2-selection--single .select2-selection__placeholder {
+      font-size: 14px; } }
 
 @media only screen and (max-width: 670px) {
   .spare-parts-page__img {
@@ -2507,6 +2517,9 @@ footer {
     width: 34px;
     height: 34px;
     padding: 0; }
+  .btn-accent {
+    font-size: 14px;
+    padding: 6px 16px; }
   .btn-basket__val {
     width: 25px;
     height: 25px;
@@ -2568,7 +2581,7 @@ footer {
       border: none; }
   .price-card-mob {
     color: #F50706;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 18px;
     display: block; }
   .accessories .section-wrapper {
@@ -2587,6 +2600,8 @@ footer {
     padding: 10px 0 30px; }
   .section-page {
     padding: 10px 0 50px; }
+  .model-page {
+    padding: 10px 0 12px; }
   .gallery-product-max__item {
     height: 260px; }
   .product-information h3 {
@@ -2599,7 +2614,7 @@ footer {
   .section-wrapper h3 {
     font-size: 22px; }
   .breadcrumbs {
-    margin: 0 0 7px; }
+    margin: 0 0 10px; }
   .tabs__caption li {
     padding: 7px; }
   .spare-parts-list li {
@@ -2628,8 +2643,6 @@ footer {
   .displacement h4 {
     font-size: 20px;
     margin: 0 0 30px; }
-  .spares-card {
-    width: 50%; }
   .model-page .section-wrapper {
     display: none; }
   .spares-card__title {
@@ -2647,9 +2660,10 @@ footer {
     margin: 10px 0; }
   .spares-card__price {
     font-size: 18px;
-    font-weight: 500; }
+    font-weight: 700; }
   .spares-card {
-    margin: 0 0 30px; }
+    width: 50%;
+    margin: 0 0 22px; }
     .spares-card__img {
       height: 130px; }
   .breadcrumbs-button {
@@ -2773,9 +2787,9 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 0;
@@ -2820,7 +2834,8 @@ footer {
       display: none; }
     .spares-card-two .spares-card__text {
       display: block;
-      font-size: 13px; }
+      font-size: 13px;
+      margin: 0 0 auto; }
       .spares-card-two .spares-card__text p {
         margin: 0 0 5px; }
   .section-wrapper-category {
@@ -2830,6 +2845,8 @@ footer {
     font-size: 15px;
     margin: 0 0 10px; }
   .gallery-product-preview {
+    display: none; }
+  .select-filter-model {
     display: none; } }
 
 @media only screen and (max-width: 480px) {
@@ -2892,7 +2909,7 @@ footer {
     .spares-card-two .spares-card__img {
       width: 48.5%; }
     .spares-card-two .spares-card__body {
-      width: 48.5%;
+      width: 48%;
       padding: 0; } }
 
 @media only screen and (max-width: 360px) {
