@@ -245,6 +245,12 @@
   .footer-box
     width: 50%
 
+  .list-brands
+    li
+      width: 33.3%
+      a
+        padding: 5px 10px
+
 @media only screen and (max-width: 576px)
   .footer-box-first
     display: none
@@ -397,7 +403,7 @@
     font-size: 22px
 
   .breadcrumbs
-    margin: 0 0 10px
+    margin: 0 0 6px
 
 
   .tabs__caption li
@@ -431,16 +437,16 @@
     font-weight: 500
     color: #000
     margin: 0 0 10px
-    min-height: 40px
-    max-height: 40px
-    overflow: hidden
+
+  .product-page h1, .product-page h2, h1, h2
+    margin: 0 0 18px
 
   .accessories-card .article
     width: 100%
     text-align: left
 
   .spares-card__article
-    margin: 10px 0
+    margin: 5px 0
 
   .spares-card__price
     font-size: 18px
@@ -451,6 +457,8 @@
     margin: 0 0 22px
     &__img
       height: 130px
+    &__body
+      height: calc(100% - 130px)
 
   .breadcrumbs-button
     display: flex
@@ -485,11 +493,7 @@
       display: none
 
 
-  .list-brands
-    li
-      width: 33.3%
-      a
-        padding: 0 10px
+
 
   .filter-page
     .section-wrapper
@@ -583,6 +587,7 @@
     display: flex
     align-items: stretch
     flex-wrap: wrap
+    flex-direction: row
     margin: 0
     padding: 10px 0 15px
     border-bottom: 1px solid #C2C2C2
@@ -648,7 +653,7 @@
       margin: 0
 
   .btn-accent
-    font-size: 16px
+    font-size: 14px
 
   .gallery-product-max__item
     height: 220px
@@ -707,14 +712,18 @@
 
   .spares-card-two
     justify-content: space-between
+
     .spares-card__img
-      width: 48.5%
+      width: 57%
     .spares-card__body
-      width: 48%
+      width: 43%
       padding: 0
 
 @media only screen and (max-width: 360px)
   .section-wrapper-category
     height: 210px
 
-
+  .list-brands
+    li
+      a
+        font-size: 17px
