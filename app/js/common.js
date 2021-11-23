@@ -93,11 +93,23 @@ $(document).mouseup(function (e){ // событие клика по веб-до�
 });
 
 // select
+function formatState (state) {
+    if (!state.id) {
+        return state.text;
+    }
+    // var baseUrl = "/user/pages/images/flags";
+    var $state = $(
+        '<span>' + state.text + '</span>'
+    );
+    return $state;
+};
+
 $(document).ready(function() {
     $('.js-example-basic-single').select2({
         placeholder: '',
         allowClear: true,
-        width: '100%'
+        width: '100%',
+        templateResult: formatState
     });
 });
 

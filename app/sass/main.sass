@@ -126,9 +126,9 @@ h1, h2
   font-size: 36px
   font-weight: bold
   width: 100%
-  margin: 0 0 23px
+  margin: 0 0 27px
   font-family: $default-font
-
+  line-height: 1
 
 .w-100
   width: 100%
@@ -515,11 +515,11 @@ header
 
 //.category
 .category
-  margin: 62px 0 0
+  margin: 27px 0 0
 
 .category-box
   text-align: center
-  margin: 0 0 30px
+  margin: 0 0 27px
   color: #000
 
   &:hover
@@ -550,7 +550,7 @@ header
 
 //footer
 footer
-  margin: 24px 0 0
+  margin: 27px 0 0
   background: #F0F0F0
 
   .logo
@@ -899,11 +899,11 @@ footer
 
 
 .delivery-terms
-  margin: 19px 0 0
+  margin: 27px 0 0
   width: 100%
 
   .list-check
-    margin: 30px 0 0
+    margin: 27px 0 0
 
 
 .list-check
@@ -983,7 +983,7 @@ footer
       color: $accent
 
   .box-text
-    margin: 24px 0 0
+    margin: 27px 0 0
 
     p
       margin: 0 0 7px
@@ -996,7 +996,7 @@ footer
   display: flex
   align-items: center
   justify-content: center
-  margin: 3px 0 37px
+  margin: 27px 0
 
   img
     width: 100%
@@ -1022,10 +1022,10 @@ footer
   flex-wrap: wrap
 
 .section-page
-  padding: 27px 0 60px
+  padding: 27px 0 0
 
 .delivery-page, .contacts-page
-  padding: 62px 0 50px
+  padding: 27px 0 0
 
 .delivery-list
   li
@@ -1049,7 +1049,8 @@ footer
 .breadcrumbs
   width: 100%
   position: relative
-  margin: 0 0 19px
+  margin: 0 0 27px
+  line-height: 1
 
 .breadcrumbs-button
   padding: 12px 8px 12px 0
@@ -1138,11 +1139,10 @@ footer
   align-items: center
   justify-content: center
   margin: 0 auto 20px
-  border: 1px solid transparent
   background: #fff
   cursor: pointer
   transition: .3s ease
-
+  border: 1px solid #BCBCBC
   img
     max-height: 100%
 
@@ -1202,14 +1202,14 @@ footer
   align-items: center
   justify-content: center
   background: #fff
-  height: 449px
-
+  height: 415px
+  border: 1px solid #BCBCBC
   img
     max-height: 100%
 
 .tabs
   width: 100%
-  margin: 0 0 30px
+  margin: 0 0 27px
 
 .tabs__caption
   width: 100%
@@ -1230,7 +1230,7 @@ footer
     border: 1px solid #C2C2C2
       radius: 5px
     background: #FAFAFA
-    margin: 30px 0 0
+    margin: 27px 0 0
     padding: 12px
     cursor: pointer
 
@@ -1284,22 +1284,22 @@ footer
     a
       color: #000000
 
-.accessories
-  margin: 0 0 70px
+//.accessories
+//  margin: 0 0 70px
 
 .accessories-card
   width: 100%
   display: flex
   align-items: center
   border-bottom: 1px solid #C2C2C2
-
+  padding: 10px 0
   &__img
-    height: 170px
+    height: 150px
     width: 259px
     display: flex
     align-items: center
     justify-content: center
-
+    border: 1px solid #BCBCBC
     img
       max-height: 100%
 
@@ -1310,7 +1310,6 @@ footer
 
   &__body
     width: 45%
-
   &__footer
     max-width: 142px
     width: 100%
@@ -1321,7 +1320,15 @@ footer
     color: #000000
     font-size: 20px
     font-weight: 600
-
+    overflow: hidden
+    text-overflow: ellipsis
+    line-clamp: 3
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 3
+    display: -webkit-box
+    -moz-box-orient: vertical
+    display: -moz-box
+    box-orient: vertical
     &-mob
       display: none
       min-height: 40px
@@ -1378,7 +1385,7 @@ footer
       max-height: 100%
 
   li
-    margin: 0 0 30px
+    margin: 0 0 27px
 
     a
       max-width: 121px
@@ -1389,12 +1396,13 @@ footer
         color: $accent
 
 .spare-parts-page__img
-  margin: 30px auto 45px
+  margin: 0 auto 27px
   display: flex
   align-items: flex-end
   justify-content: center
   font-size: 17px
   font-weight: 500
+  border: 1px solid #BCBCBC
   p
     border-bottom: 1px solid #EB5757
     padding: 0 6px 0 0
@@ -1419,7 +1427,7 @@ footer
   justify-content: space-between
 
   li
-    margin: 0 0 20px
+    margin: 0 0 27px
 
     a
       color: #000000
@@ -1449,9 +1457,9 @@ footer
     fill: $accent
 
 .result-filter-products
-  margin: 30px 0 0
   h3
-    margin: 0 0 26px
+    margin: 0 0 27px
+    line-height: 1
     font-size: 26px
     font-weight: 600
 
@@ -1490,11 +1498,13 @@ footer
   display: flex
   align-items: flex-start
   justify-content: center
+  border: 1px solid #BCBCBC
   img
     max-height: 100%
 
 //spares
 .spares
+  margin: 27px 0 0
   .section-wrapper
     display: flex
     align-items: stretch
@@ -1502,7 +1512,7 @@ footer
 
 .spares-card
   width: 33.3%
-  margin: 0 0 60px
+  margin: 0 0 27px
   display: flex
   flex-direction: column
   align-items: flex-start
@@ -1513,6 +1523,7 @@ footer
     display: flex
     align-items: center
     justify-content: center
+    border: 1px solid #BCBCBC
     img
       max-height: 100%
   &__body
@@ -1529,7 +1540,7 @@ footer
       font-size: 16px
       display: inline-block
   &__article
-    margin: 10px 0 8px
+    margin: 5px 0
     font-size: 18px
   &__title
     color: #525252
@@ -1570,10 +1581,6 @@ footer
 
 
 //filter-page
-.filter-page
-  h1
-    margin: 0 0 23px
-
 .list-brands
   width: 100%
   display: flex
@@ -1581,11 +1588,12 @@ footer
   flex-wrap: wrap
   li
     width: 16.6%
-    margin: 0 0 23px
+    margin: 0 0 27px
     a
       display: flex
       align-items: center
-      justify-content: center
+      justify-content: flex-start
+      padding: 0 30px
       //max-width: 140px
       color: #000
       font-weight: 600
@@ -1599,9 +1607,10 @@ footer
   flex-wrap: wrap
   position: relative
   z-index: 1
-  margin: 27px 0 0
+  margin: 0 0 27px
   label
     width: calc(40% - 30px)
+
 
 .btn-white
   color: #5F5F5F
@@ -1822,7 +1831,7 @@ footer
   flex-wrap: wrap
   justify-content: space-around
   li
-    margin: 0 0 10px
+    margin: 0 0 27px
     a
       width: 76px
       height: 40px
@@ -1840,16 +1849,18 @@ footer
 
 
 .article-box
-  margin: 0 0 40px
+  //margin: 0 0 40px
   h3
     font-weight: 600
-    margin: 30px 0
+    margin: 27px 0
     font-size: 24px
+    line-height: 1
   h4
     text-align: center
     font-weight: 600
-    margin: 20px auto
+    margin: 27px auto
     font-size: 20px
+    line-height: 1
   &:last-child
     margin: 0
 
@@ -1859,11 +1870,13 @@ footer
   justify-content: center
   flex-wrap: wrap
   width: 100%
+
   .image
     display: flex
     align-items: center
     justify-content: center
-    margin: 0 0 30px
+    margin: 0 0 27px
+    border: 1px solid #BCBCBC
 
 .table
   width: 100%
@@ -1898,7 +1911,7 @@ footer
   width: 100%
 
 .form-calculate
-  margin: 0 auto 40px
+  margin: 0 auto
   max-width: 770px
   width: 100%
   border-radius: 10px

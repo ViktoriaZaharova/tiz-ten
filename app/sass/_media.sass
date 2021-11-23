@@ -115,14 +115,14 @@
 
   .product-information
     width: 100%
-    padding: 20px 0 0
+    padding: 22px 0 0
     flex-direction: column
     align-items: flex-start
     display: flex
 
   .product-information-bottom
     order: -1
-    margin: 0 0 20px
+    margin: 0 0 22px
 
   .gallery-product__item
     height: 120px
@@ -248,7 +248,9 @@
   .list-brands
     li
       width: 33.3%
+      margin: 0
       a
+        justify-content: center
         padding: 5px 10px
 
 @media only screen and (max-width: 576px)
@@ -287,7 +289,10 @@
     padding: 0 0 20px
 
   .category
-    margin: 30px 0 40px
+    margin: 22px 0 0
+
+  .spares
+    margin: 0
 
   .form-search-wrap
     max-width: none
@@ -336,7 +341,7 @@
     align-items: flex-start
     padding: 0
     border: none
-    margin: 0 0 30px
+    margin: 0 0 22px
     &__img
       width: 100%
       height: 160px
@@ -355,7 +360,9 @@
       margin: 0
 
     .article
-      margin: 10px 0
+      margin: 5px 0
+      width: 100%
+      text-align: left
     &__title
       font-size: 18px
       &-mob
@@ -379,14 +386,25 @@
       justify-content: space-between
       flex-wrap: wrap
 
+
+
+  .section-page
+    padding: 10px 0 0
+
+  footer
+    margin: 20px 0 0
+
+  .delivery-terms
+    margin: 22px 0 0
+
   .product-page
     padding: 10px 0 30px
 
-  .section-page
-    padding: 10px 0 50px
-
   .model-page
-    padding: 10px 0 12px
+    padding: 10px 0 0
+
+  .page-article
+    padding: 10px 0 22px
 
   .gallery-product-max__item
     height: 260px
@@ -401,16 +419,24 @@
 
   .section-wrapper h3
     font-size: 22px
+    margin: 0 0 22px
 
   .breadcrumbs
-    margin: 0 0 6px
+    margin: 0 0 10px
 
+  .delivery-terms .list-check
+    margin: 22px 0 0
 
   .tabs__caption li
     padding: 7px
+    margin: 22px 0 0
+
+  .tabs
+    margin: 0 0 22px
 
   .spare-parts-list li
     width: 33.3%
+    margin: 0 0 22px
 
   .displacement-list
     justify-content: flex-start
@@ -419,14 +445,14 @@
       display: flex
       align-items: center
       justify-content: center
-      margin: 0 0 15px
+      margin: 0 0 22px
       a
         text-align: center
         width: fit-content
 
   .displacement h4
     font-size: 20px
-    margin: 0 0 30px
+    margin: 0 0 22px
 
   .model-page
     .section-wrapper
@@ -439,14 +465,8 @@
     margin: 0 0 10px
 
   .product-page h1, .product-page h2, h1, h2
-    margin: 0 0 18px
+    margin: 0 0 22px
 
-  .accessories-card .article
-    width: 100%
-    text-align: left
-
-  .spares-card__article
-    margin: 5px 0
 
   .spares-card__price
     font-size: 18px
@@ -493,19 +513,30 @@
       display: none
 
 
+  .map-box, .contacts-box .box-text
+    margin: 22px 0 0
 
+  .contacts-box
+    margin: 0 0 22px
+    h4
+      margin: 0
 
   .filter-page
     .section-wrapper
       display: flex
-      margin: 30px 0 0
+      margin: 0
 
   .form-filter
+    padding: 17px 0 0
     label
+      margin: 0 0 22px
       &:last-child
         margin: 0
     button
       display: none
+
+  .category-box
+    margin: 0 0 22px
 
   .card-50
     width: 48%
@@ -516,7 +547,7 @@
     display: none
 
   .delivery-page, .contacts-page
-    padding: 30px 0 40px
+    padding: 22px 0 27px
 
   .table-article
     thead
@@ -558,7 +589,7 @@
             content: 'Действие'
 
   .article-box h3
-    margin: 20px 0
+    margin: 22px 0
     font-size: 22px
 
   .input-description
@@ -592,6 +623,8 @@
     padding: 10px 0 15px
     border-bottom: 1px solid #C2C2C2
     justify-content: space-between
+    &:first-child
+      padding-top: 0
     .spares-card__category
       font-size: 15px
       margin: 0 0 10px
@@ -609,6 +642,7 @@
       align-items: flex-start
       .btn
         order: 1
+        width: 100%
     .spares-card__price
       order: 1
       width: 100px
@@ -635,6 +669,17 @@
 
   .select-filter-model
     display: none
+
+  .result-filter-products h3, .result-filter-products__box, .image-wrapper .image
+    margin: 0 0 22px
+
+  .article-box h4
+    margin: 22px auto
+
+  .list-category-ten
+    margin: 0 0 12px
+    li
+      margin: 0 0 10px
 
 @media only screen and (max-width: 480px)
   .category-box
