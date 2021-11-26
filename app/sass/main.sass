@@ -105,6 +105,7 @@ input, textarea, select
 
   &::placeholder
     color: #5F5F5F
+
   &:hover, &:focus
     outline: none
     box-shadow: none
@@ -165,6 +166,7 @@ button
   cursor: pointer
   transition: .3s ease
   font-family: $default-font
+
   &:hover, &:focus
     outline: none
     box-shadow: none
@@ -175,6 +177,7 @@ button
   justify-content: center
   text-align: center
   font-family: $default-font
+
   &:hover, &:focus
     outline: none
     box-shadow: none
@@ -222,16 +225,24 @@ button
   flex-wrap: wrap
 
 
-
 //header
 header
   padding: 16px 0 0
   width: 100%
-  border-bottom: 1px solid #BCBCBC
+  //border-bottom: 1px solid #BCBCBC
   position: relative
   z-index: 3
   background: #fff
-
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    transform: translate(-50%,0)
+    bottom: 0
+    height: 1px
+    background: #BCBCBC
+    width: calc(100% - 30px)
+    max-width: 1170px
   .container
     align-items: center
     justify-content: space-between
@@ -324,7 +335,7 @@ header
   margin: 10px 0 0
   background: #fff
   box-sizing: content-box
-  box-shadow: 1px 1px 5px rgba(198,203,203, .5)
+  box-shadow: 1px 1px 5px rgba(198, 203, 203, .5)
   border-radius: .5rem
   width: 100%
   padding: 10px 0
@@ -334,7 +345,7 @@ header
   position: absolute
   right: 15px
   top: 50%
-  transform: translate(0,-50%)
+  transform: translate(0, -50%)
   width: 20px
   height: 20px
   fill: #333
@@ -350,9 +361,11 @@ header
 .search-list
   li
     width: 100%
+
     a
       padding: 8px 15px
       color: #000
+
       &:hover
         background: #F0F0F0
 
@@ -360,8 +373,10 @@ header
   .form-search
     button
       display: none
+
   .btn-search-clear
     display: flex
+
   .form-search-result
     display: block
 
@@ -370,6 +385,7 @@ header
   align-items: center
   position: relative
   width: 100%
+
   button
     position: absolute
     top: 50%
@@ -450,6 +466,7 @@ header
     width: 17px
     height: 17px
     margin: 0 4px 0 0
+
   &:hover
     color: $accent
 
@@ -484,6 +501,7 @@ header
     align-items: center
     justify-content: center
     margin: 0 6px 0 0
+
   &:hover
     color: $accent
 
@@ -558,6 +576,8 @@ footer
     width: 100%
     margin: 0 0 10px
     overflow: hidden
+  .panel_heading
+    display: none
 
 
 .footer-bottom
@@ -643,19 +663,23 @@ footer
   margin: 0 auto
   font-size: 14px
 
-.btn-arrow-toggle
-  display: none
-  align-items: center
-  justify-content: center
-  border-radius: 50%
-  width: 28px
-  height: 28px
-  background: #DDDDDD
-  fill: #8E8E8E
+//.btn-arrow-toggle
+//  display: none
+//  align-items: center
+//  justify-content: center
+//  border-radius: 50%
+//  width: 28px
+//  height: 28px
+//  //background: #DDDDDD
+//  fill: #8E8E8E
+//
+//  .svg-icon
+//    width: 11px
+//    height: 6px
 
-  .svg-icon
-    width: 11px
-    height: 6px
+.panels-accordion
+  display: none
+  margin: 22px 0 0
 
 //menu-section
 .menu-container
@@ -949,7 +973,7 @@ footer
     justify-content: center
     width: 24px
     height: 24px
-    margin: 0 10px 0 0
+    margin: 0
     background: url("../img/arrow-bottom.svg") no-repeat center
       size: 100%
     transition: .3s ease
@@ -964,6 +988,9 @@ footer
   font-size: 16px
   display: none
 
+.delivery-price-dates
+  margin: 15px 0 0
+  width: 100%
 
 //.contacts
 .contacts-box
@@ -1060,6 +1087,7 @@ footer
   font-size: 14px
   color: #727272
   width: fit-content
+
   &__icon
     display: flex
     align-items: center
@@ -1097,6 +1125,7 @@ footer
 
       &:hover
         color: $accent
+
     .breadcrumb-page
       &:after
         display: none
@@ -1113,6 +1142,18 @@ footer
     display: flex
     align-items: flex-start
     flex-wrap: wrap
+
+.code-product
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  width: 100%
+  margin: 0 0 27px
+  p
+    margin: 0 10px 0 0
+  span
+    font-weight: bold
+    color: $accent
 
 .gallery-product
   max-width: 637px
@@ -1143,6 +1184,7 @@ footer
   cursor: pointer
   transition: .3s ease
   border: 1px solid #BCBCBC
+
   img
     max-height: 100%
 
@@ -1182,6 +1224,10 @@ footer
     font-weight: 500
     display: inline-block
 
+.btn-load-characteristics
+  margin: 10px 0 0
+  //display: none
+
 .product-information-bottom
   width: 100%
   display: flex
@@ -1204,6 +1250,7 @@ footer
   background: #fff
   height: 415px
   border: 1px solid #BCBCBC
+
   img
     max-height: 100%
 
@@ -1226,7 +1273,7 @@ footer
     align-items: center
     justify-content: center
     text-align: center
-    width: 48.5%
+    width: 32.5%
     border: 1px solid #C2C2C2
       radius: 5px
     background: #FAFAFA
@@ -1277,15 +1324,19 @@ footer
 .list-models
   li
     margin: 0 0 10px
-
+    //display: none
+    //&:nth-child(-n+4)
+    //  display: block
     &:last-child
       margin: 0
 
     a
       color: #000000
+      width: fit-content
 
-//.accessories
-//  margin: 0 0 70px
+.list-models-toggle
+  margin: 10px 0 0
+
 
 .accessories-card
   width: 100%
@@ -1293,6 +1344,7 @@ footer
   align-items: center
   border-bottom: 1px solid #C2C2C2
   padding: 10px 0
+
   &__img
     height: 150px
     width: 259px
@@ -1300,6 +1352,7 @@ footer
     align-items: center
     justify-content: center
     border: 1px solid #BCBCBC
+
     img
       max-height: 100%
 
@@ -1310,6 +1363,7 @@ footer
 
   &__body
     width: 45%
+
   &__footer
     max-width: 142px
     width: 100%
@@ -1329,6 +1383,7 @@ footer
     -moz-box-orient: vertical
     display: -moz-box
     box-orient: vertical
+
     &-mob
       display: none
       min-height: 40px
@@ -1346,7 +1401,7 @@ footer
     font-size: 20px
     font-weight: 700
     margin: 0 auto 15px
-    
+
 .line-card
   width: 100%
   height: 1px
@@ -1357,6 +1412,7 @@ footer
   width: fit-content
   border-bottom: 1px solid #525252
   margin: 10px 0 0
+
   &:hover
     border-color: transparent
     color: $accent
@@ -1381,6 +1437,7 @@ footer
     align-items: center
     justify-content: center
     margin: 0 auto 6px
+
     img
       max-height: 100%
 
@@ -1392,6 +1449,7 @@ footer
       width: 100%
       text-align: center
       color: #000000
+
       &:hover
         color: $accent
 
@@ -1403,10 +1461,12 @@ footer
   font-size: 17px
   font-weight: 500
   border: 1px solid #BCBCBC
+
   p
     border-bottom: 1px solid #EB5757
     padding: 0 6px 0 0
     margin: 0 0 11px
+
     &:last-child
       padding: 0 0 0 6px
 
@@ -1437,8 +1497,10 @@ footer
 
       &:hover
         color: $accent
+
     .active
       font-weight: bold
+
       .displacement-list__links-close
         display: flex
 
@@ -1453,6 +1515,7 @@ footer
   top: -16px
   cursor: pointer
   fill: #464646
+
   &:hover
     fill: $accent
 
@@ -1469,6 +1532,7 @@ footer
 .result-filter-products__box
   margin: 0 0 30px
   line-height: 28px
+
   h4
     font-weight: bold
 
@@ -1476,6 +1540,7 @@ footer
   li
     a
       color: #000
+
       &:hover
         color: $accent
 
@@ -1487,6 +1552,7 @@ footer
   .product-information
     width: calc(100% - 500px)
     padding: 10px 0 0 30px
+
   .list-characteristics
     li
       &:last-child
@@ -1499,12 +1565,14 @@ footer
   align-items: flex-start
   justify-content: center
   border: 1px solid #BCBCBC
+
   img
     max-height: 100%
 
 //spares
 .spares
   margin: 27px 0 0
+
   .section-wrapper
     display: flex
     align-items: stretch
@@ -1516,6 +1584,7 @@ footer
   display: flex
   flex-direction: column
   align-items: flex-start
+
   &__img
     max-width: 330px
     width: 100%
@@ -1524,8 +1593,10 @@ footer
     align-items: center
     justify-content: center
     border: 1px solid #BCBCBC
+
     img
       max-height: 100%
+
   &__body
     padding: 23px 0 0
     display: flex
@@ -1533,20 +1604,25 @@ footer
     align-items: flex-start
     width: 100%
     height: calc(100% - 274px)
+
   &__price
     color: #F50706
     font-size: 20px
+
     span
       font-size: 16px
       display: inline-block
+
   &__article
     margin: 5px 0
     font-size: 18px
+
   &__title
     color: #525252
     font-size: 18px
     margin: 0 0 14px
     width: 100%
+    padding: 0 15px 0 0
     overflow: hidden
     -webkit-line-clamp: 3
     line-clamp: 3
@@ -1554,8 +1630,10 @@ footer
     -webkit-box-orient: vertical
     display: -moz-box
     display: -webkit-box
+
     &:hover
       color: $accent
+
   &__category
     margin: 0 0 19px
     width: 100%
@@ -1565,8 +1643,10 @@ footer
     color: $accent
     text-align: center
     max-width: 330px
+
   &__text
     display: none
+
   .btn
     margin: auto 0 0
 
@@ -1575,9 +1655,14 @@ footer
   margin: 0 0 10px
   max-width: 280px
   width: 100%
+
   .select2-container--open
     .select2-selection__arrow
-      transform: rotate(180deg) translate(0,40%)
+      transform: rotate(180deg) translate(0, 40%)
+
+.select2-results__group
+  font-weight: bold
+  background: #eee
 
 
 //filter-page
@@ -1586,9 +1671,11 @@ footer
   display: flex
   align-items: center
   flex-wrap: wrap
+
   li
     width: 16.6%
     margin: 0 0 27px
+
     a
       display: flex
       align-items: center
@@ -1608,6 +1695,7 @@ footer
   position: relative
   z-index: 1
   margin: 0 0 27px
+
   label
     width: calc(40% - 30px)
 
@@ -1622,17 +1710,24 @@ footer
   width: 170px
   font-family: $default-font
   letter-spacing: 0
+
   &:hover
     background: $accent
     color: #fff
 
 //select
+.select2-search--dropdown
+  display: none
+
 .select2-container--default .select2-selection--single .select2-selection__rendered
   line-height: normal
   color: #5F5F5F
   font-size: 16px
   font-family: $default-font
-  padding: 0 40px 0 19px
+  padding: 0
+  margin: 0 20px 0 0
+  border: none
+    bottom: 1px solid #C2C2C2
 
 .select2-container--default .select2-selection--single .select2-selection__arrow
   background: url("../img/arrow-bottom.svg") no-repeat center
@@ -1642,19 +1737,21 @@ footer
   display: flex
   align-items: center
   justify-content: center
-  top: 50%
-  transform: translate(0,-50%)
-  right: 18px
+  //top: 50%
+  //transform: translate(0, -50%)
+  //right: 18px
+  position: relative
+
   b
     display: none
 
 .select2-container--default .select2-selection--single
-  height: 51px
+  height: auto
   display: flex
   align-items: center
-  justify-content: space-between
-  border: 1px solid #C2C2C2
-    radius: 5px
+  justify-content: flex-start
+  border: none
+    radius: 0
 
 .select2-container--default .select2-selection--single .select2-selection__clear
   order: 1
@@ -1663,6 +1760,7 @@ footer
   margin: 0 40px 0 auto
   background: url("../img/close.svg") no-repeat center
     size: 100%
+
   span
     display: none
 
@@ -1684,11 +1782,14 @@ footer
   height: 51px
   padding: 0 19px
 
+.select2-container--default .select2-results>.select2-results__options
+  max-height: 340px
+
 .select2-container--open .select2-dropdown--below
   margin: 10px 0 0
   background: #fff
   box-sizing: content-box
-  box-shadow: 1px 1px 5px rgba(198,203,203, .5)
+  box-shadow: 1px 1px 5px rgba(198, 203, 203, .5)
   border: none
     radius: .5rem
   padding: 10px 0
@@ -1733,6 +1834,9 @@ footer
   height: 30px
   cursor: pointer
   order: 1
+  position: absolute
+  top: 15px
+  right: 15px
   img
     margin: 0
     width: 100%
@@ -1745,9 +1849,10 @@ footer
   margin: 50px auto
   box-sizing: border-box
   position: relative
-  box-shadow: 0 5px 15px rgba(0,0,0, .5)
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
   border: 1px solid rgba(0, 0, 0, .2)
     radius: 6px
+
   h2
     margin: 0
     font-size: 24px
@@ -1772,21 +1877,27 @@ footer
   align-items: flex-start
   flex-wrap: wrap
   justify-content: space-between
+
   input
     height: 51px
     width: 100%
     border: 1px solid #C2C2C2
       radius: 5px
     padding: 0 19px
+
   .error-input
     border-color: $accent
+
   label
     width: 48%
     margin: 0 0 20px
+
   .label-message
     width: 100%
+
   .btn
     margin: 0 auto
+
   textarea
     height: 100px
     border: 1px solid #C2C2C2
@@ -1807,7 +1918,7 @@ footer
 
 
 .error-input
-  ~.error-box
+  ~ .error-box
     display: block
 
 .overlay
@@ -1816,7 +1927,7 @@ footer
   background-color: #000
   opacity: 0.5
   -moz-opacity: 0.5
-  filter: alpha(opacity = 50)
+  filter: alpha(opacity=50)
   width: 100%
   height: 100%
   top: 0
@@ -1830,8 +1941,10 @@ footer
   align-items: center
   flex-wrap: wrap
   justify-content: space-around
+
   li
     margin: 0 0 27px
+
     a
       width: 76px
       height: 40px
@@ -1843,6 +1956,7 @@ footer
       color: #5F5F5F
       border: 1px solid #C2C2C2
         radius: 5px
+
       &:hover
         color: $accent
         border-color: $accent
@@ -1855,12 +1969,14 @@ footer
     margin: 27px 0
     font-size: 24px
     line-height: 1
+
   h4
     text-align: center
     font-weight: 600
     margin: 27px auto
     font-size: 20px
     line-height: 1
+
   &:last-child
     margin: 0
 
@@ -1880,19 +1996,25 @@ footer
 
 .table
   width: 100%
+
   td
     border: 1px solid #C2C2C2
     vertical-align: middle
     padding: 20px
+
     &:first-child, &:nth-child(2)
       text-align: center
+
     &:last-child
       width: 50%
+
     &:first-child
       width: 15%
+
   thead
     background: #F0F0F0
     text-align: center
+
   th
     padding: 15px
     font-weight: 500
@@ -1923,6 +2045,7 @@ footer
     align-items: center
     flex-wrap: wrap
     margin: 0 0 13px
+
   input
     padding: 0 10px
     width: 271px
@@ -1930,8 +2053,10 @@ footer
     border: 1px solid #C2C2C2
       radius: 5px
     background: #fff
+
   button
     width: 271px
+
   .error-input
     border-color: $accent
 
@@ -1950,8 +2075,10 @@ footer
   display: flex
   align-items: stretch
   flex-wrap: wrap
+
   .btn
     margin: 0 0 13px
+
   .btn-clear
     margin: 0 0 13px 20px
 
@@ -1963,6 +2090,7 @@ footer
   font-size: 16px
   color: #000
   font-weight: 500
+
   &:hover
     background: $accent
     color: #fff
@@ -1973,21 +2101,27 @@ footer
 
 .table-characteristics
   font-size: 18px
+
   thead
     background: #F5F5F5
     font-weight: 600
+
   th, td
     text-align: center
     padding: 11px 15px
+
     &:first-child
       text-align: left
+
   tbody
     tr
       &:nth-child(even)
         background: #F5F5F5
+
   td
     &:nth-child(2), &:first-child
       text-align: left
+
     &:first-child
       font-weight: 500
 
@@ -2004,6 +2138,7 @@ footer
   margin: 0 auto
   width: 100%
   bottom: 0
+
   li
     cursor: pointer
     transition: .4s ease
@@ -2013,10 +2148,13 @@ footer
       radius: 50%
     background: transparent
     margin: 0 10px 0 0
+
     &:last-child
       margin: 0
+
     button
       display: none
+
   .slick-active
     background: $accent
     border-color: $accent

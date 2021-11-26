@@ -1,18 +1,12 @@
-// accordeon
-function accordeon() {
-    var panel = $('.panel_heading');
+$(document).ready(function () {
+    $('.panel_heading:first-child').addClass('in').find('.block_hover').fadeIn();
 
-    if (panel.hasClass('in')) {
-        $('.in').find('.block_hover').slideDown();
-    }
-
-    $('.panel_heading .block_title').on('click', function () {
+    $('.panel_heading > .block_title').on('click', function () {
         $(this).parent().toggleClass('in').find('.block_hover').slideToggle();
+        $(this).parent().siblings('.panel_heading').not(this).removeClass('in').find('.block_hover').slideUp();
     });
-}
 
-accordeon();
-
+});
 
 $('.gallery-product-max').slick({
     slidesToShow: 1,
@@ -81,6 +75,10 @@ $('.breadcrumbs-button').on('click', function () {
    $('.breadcrumb').toggleClass('open');
 });
 
+$('.tabs__caption-mobile').on('click', function () {
+    $('.tabs__content').removeClass('active');
+   $(this).siblings('.tabs__content').slideDown();
+});
 
 
 // событие клика за пределами блока
@@ -92,24 +90,24 @@ $(document).mouseup(function (e){ // событие клика по веб-до�
     }
 });
 
-// select
-function formatState (state) {
-    if (!state.id) {
-        return state.text;
+// скрыть меню каталога по клику за его пределами
+$(document).mouseup(function (e) { // событие клика по веб-документу
+    var div = $(".menu-container"); // тут указываем ID элемента
+    var btn = $('.btn-catalog');
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        && !btn.is(e.target) && btn.has(e.target).length === 0
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        div.fadeOut(); // скрываем его
+        $('.overlay-menu').fadeOut();
+        btn.removeClass('open-menu');
     }
-    // var baseUrl = "/user/pages/images/flags";
-    var $state = $(
-        '<span>' + state.text + '</span>'
-    );
-    return $state;
-};
+});
 
 $(document).ready(function() {
     $('.js-example-basic-single').select2({
         placeholder: '',
         allowClear: true,
         width: '100%',
-        templateResult: formatState
     });
 });
 
@@ -121,3 +119,48 @@ $(function () {
         $(this).load(file);
     });
 });
+
+$('.models-box .list-models').each(function () {
+    if ($(this).find('li').length > 4) {
+        $(this).find('li').slice(4).hide();
+        $(this).parent('.models-box').append('<a href="#" class="list-models-toggle color-accent">показать все</a>');
+    }
+
+});
+
+$('.list-models-toggle').on('click', function (e) {
+    e.preventDefault();
+    $('.list-models li:hidden').slideDown();
+    $(this).hide();
+});
+
+
+$('.list-characteristics').each(function () {
+    if ($(this).find('li').length > 4) {
+        $(this).find('li').slice(4).hide();
+        $(this).parent('.characteristics-wrap').append('<a href="#" class="btn-load-characteristics color-accent">Все характеристики</a>')
+    }
+});
+
+
+$('.btn-load-characteristics').on('click', function(e){
+    e.preventDefault();
+
+    var
+        $this = $(this),
+        content = $(this).parent().find('.list-characteristics li');
+
+
+    if(!$this.hasClass('trigger')){
+        $this.addClass('trigger');
+        $this.html('Свернуть');
+
+        content.css('display', 'flex');
+    } else {
+        $this.removeClass('trigger');
+        $this.html('Все характеристики');
+
+        content.slice(4).slideUp();
+    }
+});
+

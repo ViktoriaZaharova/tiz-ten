@@ -21,12 +21,66 @@
 
 
       <a href="#" class="btn-mobile btn-border-red btn">Карта пунктов выдачи</a>
+      <div class="panel_heading">
+        <div class="block_title">
+          <h4>Информация</h4>
+        </div>
+        <div class="block_hover">
+          <ul class="footer-menu">
+            <li><a href="#">О Компании</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Возврат и обмен товара</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Юридическим лицам</a></li>
+            <li><a href="#">Сотрудничество с мастерами</a></li>
+            <li><a href="#">Поставщикам</a></li>
+            <li><a href="#">Полезные статьи</a></li>
+            <li><a href="#">Карта сайта</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel_heading">
+        <div class="block_title">
+          <h4>Каталог запчастей</h4>
+        </div>
+        <div class="block_hover">
+          <ul class="footer-menu">
+            <li><a href="#">Водонагреватели</a></li>
+            <li><a href="#">Электрокотлы</a></li>
+            <li><a href="#">Электрокаменки</a></li>
+            <li><a href="#">Стиральные машины</a></li>
+            <li><a href="#">Аппараты для шаурмы</a></li>
+            <li><a href="#">Фритюрницы</a></li>
+            <li><a href="#">Электроплиты</a></li>
+            <li><a href="#">Тэны для отопления</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel_heading">
+        <div class="block_title">
+          <h4>Контакты</h4>
+        </div>
+        <div class="block_hover">
+          <div class="footer-box__body">
+            <a href="tel:+74993912732" class="phone">8 (499) 391-27-32</a>
+            <a href="tel:+79777157294" class="phone">8 (977) 715-72-94</a>
+            <div class="mail">
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#mail"></use>
+              </svg>
+              <span class="mail-text">tvoiservis@mail.ru</span>
+            </div>
+            <ul class="list-social">
+              <li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/whatsapp.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/callback.svg" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div class="footer-box">
-        <h3>Информация <a href="#" class="btn-arrow-toggle">
-          <svg class="svg-icon">
-            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
-          </svg>
-        </a></h3>
+        <h3>Информация</h3>
         <div class="footer-box__body">
           <ul class="footer-menu">
             <li><a href="#">О Компании</a></li>
@@ -43,11 +97,7 @@
       </div>
 
       <div class="footer-box">
-        <h3>Каталог запчастей <a href="#" class="btn-arrow-toggle">
-          <svg class="svg-icon">
-            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
-          </svg>
-        </a></h3>
+        <h3>Каталог запчастей </h3>
         <div class="footer-box__body">
           <ul class="footer-menu">
             <li><a href="#">Водонагреватели</a></li>
@@ -63,11 +113,7 @@
       </div>
 
       <div class="footer-box">
-        <h3>Контакты <a href="#" class="btn-arrow-toggle">
-          <svg class="svg-icon">
-            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
-          </svg>
-        </a></h3>
+        <h3>Контакты </h3>
         <div class="footer-box__body">
           <a href="tel:+74993912732" class="phone">8 (499) 391-27-32</a>
           <a href="tel:+79777157294" class="phone">8 (977) 715-72-94</a>
@@ -97,7 +143,15 @@
     $('.btn-arrow-toggle').on('click', function (e) {
         e.preventDefault();
         $('.footer-box h3').removeClass('click');
-        $('.footer-box__body').slideUp();
+        $('.footer-box__body').slideToggle();
         $(this).parent().addClass('click').siblings('.footer-box__body').slideDown();
     });
+    // $(document).ready(function () {
+    //
+    //     $('.panel_heading .block_title').on('click', function () {
+    //         $(this).parent().toggleClass('in').find('.block_hover').slideToggle();
+    //         $('.panel_heading .block_title').not(this).parent().removeClass('in').find('.block_hover').slideUp();
+    //     });
+    //
+    // });
 </script>
