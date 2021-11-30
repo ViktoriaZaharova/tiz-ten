@@ -1162,7 +1162,7 @@ footer
   align-items: flex-start
   justify-content: space-between
   flex-wrap: wrap
-
+  margin: 0 0 27px
 
 .gallery-product-preview
   max-width: 124px
@@ -1250,9 +1250,17 @@ footer
   background: #fff
   height: 415px
   border: 1px solid #BCBCBC
-
+  span
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
   img
     max-height: 100%
+
+
 
 .tabs
   width: 100%
@@ -1586,7 +1594,7 @@ footer
   align-items: flex-start
 
   &__img
-    max-width: 330px
+    padding: 0 20px 0 0
     width: 100%
     height: 274px
     display: flex
@@ -1598,7 +1606,7 @@ footer
       max-height: 100%
 
   &__body
-    padding: 23px 0 0
+    padding: 23px 20px 0 0
     display: flex
     flex-direction: column
     align-items: flex-start
@@ -1699,6 +1707,11 @@ footer
   label
     width: calc(40% - 30px)
 
+.form-filter__label
+  border: 1px solid #C2C2C2
+    radius: 5px
+  overflow: hidden
+  padding: 3px 5px
 
 .btn-white
   color: #5F5F5F
@@ -2101,7 +2114,7 @@ footer
 
 .table-characteristics
   font-size: 18px
-
+  margin: 0 0 27px
   thead
     background: #F5F5F5
     font-weight: 600
@@ -2158,6 +2171,23 @@ footer
   .slick-active
     background: $accent
     border-color: $accent
+
+.wrapper-1500
+  .container
+    max-width: 1500px
+  header
+    &:before
+      max-width: 1500px
+  .form-search-wrap
+    max-width: 700px
+  .btn-catalog
+    padding: 16px 50px
+  .model-gallery
+    max-width: 700px
+  .model-gallery__img
+    height: 450px
+  .product-information
+    width: calc(100% - 700px)
 
 @import "media"
 // Всегда в конце

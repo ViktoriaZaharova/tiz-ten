@@ -1,3 +1,42 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+  <meta charset="utf-8">
+  <title>ТизТэн - страница модели</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="keywords" content="keyword для сайта">
+  <meta name="description" content="description для сайта">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+<div class="wrapper-1500">
+
+
+
 <div class="mobile-menu">
   <ul class="mobile-menu__list">
     <li class="dropdown-item">
@@ -863,100 +902,294 @@
 <!-- Пoдлoжкa -->
 <div class="overlay"></div>
 
-<script>
+<section class="section-page product-page model-page">
+  <div class="container">
+    <div class="breadcrumbs">
+      <div class="breadcrumbs-button">
+        <div class="breadcrumbs-button__text">Главная</div>
+        <div class="breadcrumbs-button__icon"><img src="img/arrow-bottom.svg" alt=""></div>
+      </div>
+      <ul class="breadcrumb">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Запчасти для водонагревателей </a></li>
+        <li><a href="#" class="breadcrumb-page">Запчасти для водонагревателей Термекс</a></li>
+      </ul>
+    </div>
+    <h1>Запчасти для водонагревателя Термекс IF 100V</h1>
 
-    $('.dropdown-item__links').on('click', function (e) {
-        e.preventDefault();
-        $(this).siblings('.dropdown-menu').css('left', '0');
-    });
+    <div class="section-wrapper">
+      <div class="gallery-product model-gallery">
+        <div class="model-gallery__img">
+<!--          <img src="img/model.png" alt="">-->
+        </div>
+      </div>
 
-    $('.prev-menu').on('click', function (e) {
-        e.preventDefault();
-        $(this).parent('.dropdown-menu').css('left', '-100%');
-    });
+      <div class="product-information">
+        <h3>Общие характеристики</h3>
+        <ul class="list-characteristics">
+          <li>
+            <p>Серия</p><span>FLAT PLUS</span>
+          </li>
+          <li>
+            <p>Модель</p><span>IF 100V</span>
+          </li>
+          <li>
+            <p>Способ установки</p><span>Вертикальный</span>
+          </li>
+          <li>
+            <p>Литраж</p><span>100 литров</span>
+          </li>
+          <li>
+            <p>Управление</p><span>Электронное</span>
+          </li>
+          <li>
+            <p>Размеры (мм) В×Ш×Г</p><span>1273×497×297</span>
+          </li>
+          <li>
+            <strong>Запчасти к другим моделям Thermex</strong>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="spares">
+  <div class="container">
+    <h2>ТЭНы для Термекс IF 100V</h2>
+
+    <div class="section-wrapper w-100">
+      <div class="spares-card">
+        <a href="#" class="spares-card__img">
+<!--          <img src="img/category-product1.jpeg" alt="">-->
+        </a>
+        <div class="spares-card__body">
+          <div class="spares-card__price">1900 <span class="currency">руб.</span></div>
+          <div class="spares-card__article">Код - К52</div>
+          <a href="#" class="spares-card__title">ТЭНы из нержавейки</a>
+          <div class="select-filter-model">
+            <select name="state" class="select-filter js-example-basic-single" data-placeholder="Применяется в моделях">
+              <option value=""></option>
+              <optgroup label="RZB F">
+                <option value="Ariston">Ariston</option>
+                <option value="Ariston">Ariston</option>
+                <option value="Ariston">Ariston</option>
+              </optgroup>
+              <optgroup label="FSS V">
+                <option value="FSS 30 V">FSS 30 V</option>
+                <option value="FSS 30 V">FSS 30 V</option>
+                <option value="FSS 30 V">FSS 30 V</option>
+              </optgroup>
+              <optgroup label="RZB F">
+                <option value="Ariston">Ariston</option>
+                <option value="Ariston">Ariston</option>
+                <option value="Ariston">Ariston</option>
+              </optgroup>
+            </select>
+          </div>
+          <a href="#" class="btn btn-accent">В корзину</a>
+        </div>
+      </div>
+      <div class="spares-card">
+        <a href="#" class="spares-card__img">
+<!--          <img src="img/category-product1.jpeg" alt="">-->
+        </a>
+        <div class="spares-card__body">
+          <div class="spares-card__price">1900 <span class="currency">руб.</span></div>
+          <div class="spares-card__article">Код - К52</div>
+          <a href="#" class="spares-card__title">ТЭНы из нержавейки</a>
+
+          <a href="#" class="btn btn-accent">В корзину</a>
+        </div>
+      </div>
+      <div class="spares-card">
+        <a href="#" class="spares-card__img">
+<!--          <img src="img/category-product1.jpeg" alt="">-->
+        </a>
+        <div class="spares-card__body">
+          <div class="spares-card__price">1900 <span class="currency">руб.</span></div>
+          <div class="spares-card__article">Код - К52</div>
+          <a href="#" class="spares-card__title">ТЭНы из нержавейки</a>
+          <a href="#" class="btn btn-accent">В корзину</a>
+        </div>
+      </div>
+      <div class="spares-card">
+        <a href="#" class="spares-card__img">
+<!--          <img src="img/category-product1.jpeg" alt="">-->
+        </a>
+        <div class="spares-card__body">
+          <div class="spares-card__price">1900 <span class="currency">руб.</span></div>
+          <div class="spares-card__article">Код - К52</div>
+          <a href="#" class="spares-card__title">ТЭНы из нержавейки</a>
+
+          <a href="#" class="btn btn-accent">В корзину</a>
+        </div>
+      </div>
+      <div class="spares-card">
+        <a href="#" class="spares-card__img">
+<!--          <img src="img/category-product1.jpeg" alt="">-->
+        </a>
+        <div class="spares-card__body">
+          <div class="spares-card__price">1900 <span class="currency">руб.</span></div>
+          <div class="spares-card__article">Код - К52</div>
+          <a href="#" class="spares-card__title">ТЭНы из нержавейки</a>
+          <a href="#" class="btn btn-accent">В корзину</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-    $(".mega-menu__route").hover(function () {
-        var id = $(this).attr('data-tab'),
-            content = $('.js-tab-content[data-tab="' + id + '"]');
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-box footer-box-first">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+        <a href="#" class="header-item-address header-item-address__loc">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#location"></use>
+          </svg>
+          <span class="header-item__text">Москва, ул. Нагатинская, 31</span>
+        </a>
+        <a href="#" class="header-item-address header-item-address__point">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#map"></use>
+          </svg>
+          <div class="header-item__text">Пункты выдачи</div>
+        </a>
 
-        $('.mega-menu__route.active').removeClass('active'); // 1
-        $(this).addClass('active'); // 2
-
-        $('.js-tab-content.active').removeClass('active'); // 3
-        content.addClass('active'); // 4
-    });
-
-
-    $('.btn-catalog').on('click', function (e) {
-        e.preventDefault();
-        $('.overlay-menu').fadeToggle();
-        $(this).toggleClass('open-menu');
-        $('.menu-container').fadeToggle();
-    });
-
-
-    $('.btn-burger-mobile').on('click', function (e) {
-        e.preventDefault();
-        $(this).toggleClass('clicked');
-        $('.mobile-menu').fadeToggle();
-    });
-
-    // input search
-    $(function () {
-        $('.form-search input').keydown(checkInput).keyup(checkInput);
-    });
-
-    function checkInput() {
-        if ($('.form-search input').val() === '') {
-            $(this).parents('.form-search-wrap').removeClass('clicked');
-        } else {
-            $(this).parents('.form-search-wrap').addClass('clicked');
-        }
-    }
-
-    // модальные окна (несколько)
-    $(function () {
-        let overlay = $('.overlay'),
-            open_modal = $('.open_modal'),
-            close = $('.modal__close, .overlay'),
-            modal = $('.modal__div');
-
-        open_modal.on('click', function (event) {
-            event.preventDefault();
-
-            modal.css('display', 'none').animate({
-                opacity: 0,
-                top: '45%'
-            }, 200);
-
-            let div = $(this).attr('href');
-            overlay.fadeIn(400,
-                function () {
-                    $(div)
-                        .css('display', 'flex')
-                        .animate({
-                            opacity: 1,
-                            top: '50%'
-                        }, 200);
-                });
-
-        });
-
-        close.on('click', function () {
-            modal
-                .animate({
-                        opacity: 0,
-                        top: '45%'
-                    }, 200,
-                    function () {
-                        $(this).css('display', 'none');
-                        overlay.fadeOut(400);
-                    }
-                );
-        });
-    });
-    //end
-</script>
+        <a href="#" class="yandex-links"><img src="img/yandex.jpeg" alt=""></a>
+      </div>
 
 
+      <a href="#" class="btn-mobile btn-border-red btn">Карта пунктов выдачи</a>
+      <div class="panel_heading">
+        <div class="block_title">
+          <h4>Информация</h4>
+        </div>
+        <div class="block_hover">
+          <ul class="footer-menu">
+            <li><a href="#">О Компании</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Возврат и обмен товара</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Юридическим лицам</a></li>
+            <li><a href="#">Сотрудничество с мастерами</a></li>
+            <li><a href="#">Поставщикам</a></li>
+            <li><a href="#">Полезные статьи</a></li>
+            <li><a href="#">Карта сайта</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel_heading">
+        <div class="block_title">
+          <h4>Каталог запчастей</h4>
+        </div>
+        <div class="block_hover">
+          <ul class="footer-menu">
+            <li><a href="#">Водонагреватели</a></li>
+            <li><a href="#">Электрокотлы</a></li>
+            <li><a href="#">Электрокаменки</a></li>
+            <li><a href="#">Стиральные машины</a></li>
+            <li><a href="#">Аппараты для шаурмы</a></li>
+            <li><a href="#">Фритюрницы</a></li>
+            <li><a href="#">Электроплиты</a></li>
+            <li><a href="#">Тэны для отопления</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel_heading">
+        <div class="block_title">
+          <h4>Контакты</h4>
+        </div>
+        <div class="block_hover">
+          <div class="footer-box__body">
+            <a href="tel:+74993912732" class="phone">8 (499) 391-27-32</a>
+            <a href="tel:+79777157294" class="phone">8 (977) 715-72-94</a>
+            <div class="mail">
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#mail"></use>
+              </svg>
+              <span class="mail-text">tvoiservis@mail.ru</span>
+            </div>
+            <ul class="list-social">
+              <li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/whatsapp.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/callback.svg" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Информация</h3>
+        <div class="footer-box__body">
+          <ul class="footer-menu">
+            <li><a href="#">О Компании</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Возврат и обмен товара</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Юридическим лицам</a></li>
+            <li><a href="#">Сотрудничество с мастерами</a></li>
+            <li><a href="#">Поставщикам</a></li>
+            <li><a href="#">Полезные статьи</a></li>
+            <li><a href="#">Карта сайта</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Каталог запчастей </h3>
+        <div class="footer-box__body">
+          <ul class="footer-menu">
+            <li><a href="#">Водонагреватели</a></li>
+            <li><a href="#">Электрокотлы</a></li>
+            <li><a href="#">Электрокаменки</a></li>
+            <li><a href="#">Стиральные машины</a></li>
+            <li><a href="#">Аппараты для шаурмы</a></li>
+            <li><a href="#">Фритюрницы</a></li>
+            <li><a href="#">Электроплиты</a></li>
+            <li><a href="#">Тэны для отопления</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Контакты </h3>
+        <div class="footer-box__body">
+          <a href="tel:+74993912732" class="phone">8 (499) 391-27-32</a>
+          <a href="tel:+79777157294" class="phone">8 (977) 715-72-94</a>
+          <div class="mail">
+            <svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#mail"></use>
+            </svg>
+            <span class="mail-text">tvoiservis@mail.ru</span>
+          </div>
+          <ul class="list-social">
+            <li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/whatsapp.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/callback.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="copyright">© 2012 – 2021 «ТизТэн». Все права защищены.</div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<div class="overlay-menu"></div>
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
