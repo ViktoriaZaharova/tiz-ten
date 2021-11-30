@@ -8,88 +8,6 @@ $(document).ready(function () {
 
 });
 
-
-$('.gallery-product-max').slick({
-    slidesToShow: 1,
-    fade: true,
-    arrows: false,
-    dots: false,
-    // asNavFor: '.gallery-product-preview',
-    focusOnSelect: true,
-    afterChange: function (slickSlider, i) {
-        //remove all active class
-        $('.gallery-product-preview .slick-slide').removeClass('slick-active');
-        //set active class for current slide
-        $('.gallery-product-preview .slick-slide').eq(i).addClass('slick-active');
-    },
-    responsive: [
-        {
-            breakpoint: 576,
-            settings: {
-                dots: true,
-            }
-        }
-    ]
-});
-
-$('.gallery-product-preview').slick({
-    slidesToShow: 3,
-    arrows: false,
-    dots: false,
-    asNavFor: '.gallery-product-max',
-    // focusOnSelect: true,
-    vertical: true,
-    responsive: [
-        {
-            breakpoint: 860,
-            settings: {
-                vertical: false,
-                slidesToShow: 6,
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 5,
-                vertical: false,
-            }
-        },
-        {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 3,
-                vertical: false,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 2,
-                vertical: false,
-            }
-        }
-    ]
-});
-
-//set active class to first slide
-$('.gallery-product-preview .slick-slide').eq(0).addClass('slick-active');
-
-var slideTimer;
-$('.gallery-product-preview').on('mouseenter', '.slick-slide', function (e) {
-    var $currTarget = $(e.currentTarget);
-    $('.gallery-product-preview .slick-slide').removeClass('slick-current');
-    $currTarget.addClass('slick-current');
-
-    slideTimer = setTimeout(function () {
-        var index = $('.gallery-product-preview').find('.slick-current').data('slick-index');
-        var slickObj = $('.gallery-product-max').slick('getSlick');
-        slickObj.slickGoTo(index);
-    }, 120);
-}).on('mouseleave', '.slick-slide', function (e) {
-    clearTimeout(slideTimer);
-});
-
-
 // tabs
 $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
     $(this)
@@ -190,3 +108,186 @@ $('.btn-load-characteristics').on('click', function(e){
     }
 });
 
+$(document).ready(function(){
+    $('.zoom-box').zoom();
+});
+
+$(window).on('load resize', function() {
+    if ($(window).width() < 768) {
+        $('.zoom-box').trigger('zoom.destroy');
+    }
+});
+
+// header js
+$('.dropdown-item__links').on('click', function (e) {
+    e.preventDefault();
+    $(this).siblings('.dropdown-menu').css('left', '0');
+});
+
+$('.prev-menu').on('click', function (e) {
+    e.preventDefault();
+    $(this).parent('.dropdown-menu').css('left', '-100%');
+});
+
+
+$(".mega-menu__route").hover(function () {
+    var id = $(this).attr('data-tab'),
+        content = $('.js-tab-content[data-tab="' + id + '"]');
+
+    $('.mega-menu__route.active').removeClass('active'); // 1
+    $(this).addClass('active'); // 2
+
+    $('.js-tab-content.active').removeClass('active'); // 3
+    content.addClass('active'); // 4
+});
+
+
+$('.btn-catalog').on('click', function (e) {
+    e.preventDefault();
+    $('.overlay-menu').fadeToggle();
+    $(this).toggleClass('open-menu');
+    $('.menu-container').fadeToggle();
+});
+
+
+$('.btn-burger-mobile').on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('clicked');
+    $('.mobile-menu').fadeToggle();
+});
+
+// input search
+$(function () {
+    $('.form-search input').keydown(checkInput).keyup(checkInput);
+});
+
+function checkInput() {
+    if ($('.form-search input').val() === '') {
+        $(this).parents('.form-search-wrap').removeClass('clicked');
+    } else {
+        $(this).parents('.form-search-wrap').addClass('clicked');
+    }
+}
+
+// модальные окна (несколько)
+$(function () {
+    let overlay = $('.overlay'),
+        open_modal = $('.open_modal'),
+        close = $('.modal__close, .overlay'),
+        modal = $('.modal__div');
+
+    open_modal.on('click', function (event) {
+        event.preventDefault();
+
+        modal.css('display', 'none').animate({
+            opacity: 0,
+            top: '45%'
+        }, 200);
+
+        let div = $(this).attr('href');
+        overlay.fadeIn(400,
+            function () {
+                $(div)
+                    .css('display', 'flex')
+                    .animate({
+                        opacity: 1,
+                        top: '50%'
+                    }, 200);
+                $('.slick-slider').slick('setPosition');
+            });
+
+    });
+
+    close.on('click', function () {
+        modal
+            .animate({
+                    opacity: 0,
+                    top: '45%'
+                }, 200,
+                function () {
+                    $(this).css('display', 'none');
+                    overlay.fadeOut(400);
+                }
+            );
+    });
+});
+
+$('.gallery-product-max').slick({
+    slidesToShow: 1,
+    fade: true,
+    arrows: false,
+    dots: false,
+    // asNavFor: '.gallery-product-preview',
+    focusOnSelect: true,
+    afterChange: function (slickSlider, i) {
+        //remove all active class
+        $('.gallery-product-preview .slick-slide').removeClass('slick-active');
+        //set active class for current slide
+        $('.gallery-product-preview .slick-slide').eq(i).addClass('slick-active');
+    },
+    responsive: [
+        {
+            breakpoint: 576,
+            settings: {
+                dots: true,
+            }
+        }
+    ]
+});
+
+$('.gallery-product-preview').slick({
+    slidesToShow: 3,
+    arrows: false,
+    dots: false,
+    asNavFor: '.gallery-product-max',
+    focusOnSelect: true,
+    vertical: true,
+    responsive: [
+        {
+            breakpoint: 860,
+            settings: {
+                vertical: false,
+                slidesToShow: 6,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 5,
+                vertical: false,
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 3,
+                vertical: false,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                vertical: false,
+            }
+        }
+    ]
+});
+
+//set active class to first slide
+$('.gallery-product-preview .slick-slide').eq(0).addClass('slick-active');
+
+var slideTimer;
+$('.gallery-product-preview').on('mouseenter', '.slick-slide', function (e) {
+    var $currTarget = $(e.currentTarget);
+    $('.gallery-product-preview .slick-slide').removeClass('slick-current');
+    $currTarget.addClass('slick-current');
+
+    slideTimer = setTimeout(function () {
+        var index = $('.gallery-product-preview').find('.slick-current').data('slick-index');
+        var slickObj = $('.gallery-product-max').slick('getSlick');
+        slickObj.slickGoTo(index);
+    }, 120);
+}).on('mouseleave', '.slick-slide', function (e) {
+    clearTimeout(slideTimer);
+});
