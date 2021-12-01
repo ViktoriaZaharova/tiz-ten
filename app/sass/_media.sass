@@ -70,7 +70,8 @@
   .footer-menu
     font-size: 14px
 
-
+  #product__modal .gallery-product-max__item
+    height: 320px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 860px)
@@ -169,6 +170,15 @@
       margin: 0 0 20px
     button
       margin: 0 auto
+
+  .list-characteristics
+    li
+      display: none
+      &:nth-child(-n+4)
+        display: flex
+
+  .btn-load-characteristics
+    display: flex
 
 @media only screen and (max-width: 767px)
   .col-4
@@ -701,6 +711,16 @@
 
   .slick-dots
     margin: 10px 0 0
+
+  .slick-arrow
+    width: 25px
+    height: 25px
+
+  #product__modal
+    .modal__wrapper
+      margin: 0 auto
+    .slick-dots
+      display: none !important
 
 @media only screen and (max-width: 480px)
   .category-box

@@ -79,12 +79,12 @@ $('.list-models-toggle').on('click', function (e) {
 });
 
 
-$('.list-characteristics').each(function () {
-    if ($(this).find('li').length > 4) {
-        $(this).find('li').slice(4).hide();
-        $(this).parent('.characteristics-wrap').append('<a href="#" class="btn-load-characteristics color-accent">Все характеристики</a>')
-    }
-});
+// $('.list-characteristics').each(function () {
+//     if ($(this).find('li').length > 4) {
+//         $(this).find('li').slice(4).hide();
+//         $(this).parent('.characteristics-wrap').append('<a href="#" class="btn-load-characteristics color-accent">Все характеристики</a>')
+//     }
+// });
 
 
 $('.btn-load-characteristics').on('click', function(e){
@@ -215,7 +215,9 @@ $(function () {
 $('.gallery-product-max').slick({
     slidesToShow: 1,
     fade: true,
-    arrows: false,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><img src="img/arrow.svg" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="img/arrow.svg" alt=""></button>',
     dots: false,
     // asNavFor: '.gallery-product-preview',
     focusOnSelect: true,
@@ -247,27 +249,17 @@ $('.gallery-product-preview').slick({
             breakpoint: 860,
             settings: {
                 vertical: false,
-                slidesToShow: 6,
             }
         },
         {
             breakpoint: 768,
             settings: {
-                slidesToShow: 5,
                 vertical: false,
             }
         },
         {
             breakpoint: 576,
             settings: {
-                slidesToShow: 3,
-                vertical: false,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 2,
                 vertical: false,
             }
         }
