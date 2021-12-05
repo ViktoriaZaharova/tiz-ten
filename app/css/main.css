@@ -1335,13 +1335,17 @@ footer {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 18px 0 0; }
+  margin: 0 0 18px; }
 
 .price-product {
   color: #F50706;
   font-size: 24px;
   font-weight: 700;
   margin: 0 47px 0 0; }
+
+.delivery-date {
+  margin: 0 0 10px;
+  font-weight: 500; }
 
 .gallery-product-max__item {
   width: 100%;
@@ -3122,7 +3126,9 @@ footer {
   #product__modal .modal__wrapper {
     margin: 0 auto; }
   #product__modal .slick-dots {
-    display: none !important; } }
+    display: none !important; }
+  .characteristics-title {
+    display: none; } }
 
 @media only screen and (max-width: 480px) {
   .category-box {
