@@ -212,9 +212,8 @@ $(function () {
     });
 });
 
-$('.gallery-product-max').slick({
+$('#gallery-product-max-1').slick({
     slidesToShow: 1,
-    fade: true,
     arrows: true,
     prevArrow: '<button type="button" class="slick-prev"><img src="img/arrow.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="img/arrow.svg" alt=""></button>',
@@ -223,25 +222,78 @@ $('.gallery-product-max').slick({
     focusOnSelect: true,
     afterChange: function (slickSlider, i) {
         //remove all active class
-        $('.gallery-product-preview .slick-slide').removeClass('slick-active');
+        $('#gallery-product-preview-1 .slick-slide').removeClass('slick-active');
         //set active class for current slide
-        $('.gallery-product-preview .slick-slide').eq(i).addClass('slick-active');
+        $('#gallery-product-preview-1 .slick-slide').eq(i).addClass('slick-active');
     },
     responsive: [
         {
             breakpoint: 576,
             settings: {
-                dots: true,
+                dots: true, arrows: false,
             }
         }
     ]
 });
 
-$('.gallery-product-preview').slick({
+$('#gallery-product-preview-1').slick({
     slidesToShow: 3,
     arrows: false,
     dots: false,
-    asNavFor: '.gallery-product-max',
+    asNavFor: '#gallery-product-max-1',
+    focusOnSelect: true,
+    vertical: true,
+    responsive: [
+        {
+            breakpoint: 860,
+            settings: {
+                vertical: false,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                vertical: false,
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                vertical: false,
+            }
+        }
+    ]
+});
+
+$('#gallery-product-max-2').slick({
+    slidesToShow: 1,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><img src="img/arrow.svg" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="img/arrow.svg" alt=""></button>',
+    dots: false,
+    // asNavFor: '.gallery-product-preview',
+    focusOnSelect: true,
+    afterChange: function (slickSlider, i) {
+        //remove all active class
+        $('#gallery-product-preview-2 .slick-slide').removeClass('slick-active');
+        //set active class for current slide
+        $('#gallery-product-preview-2 .slick-slide').eq(i).addClass('slick-active');
+    },
+    responsive: [
+        {
+            breakpoint: 576,
+            settings: {
+                dots: true, arrows: false,
+            }
+        }
+    ]
+});
+
+$('#gallery-product-preview-2').slick({
+    slidesToShow: 3,
+    arrows: false,
+    dots: false,
+    asNavFor: '#gallery-product-max-2',
     focusOnSelect: true,
     vertical: true,
     responsive: [
@@ -267,19 +319,42 @@ $('.gallery-product-preview').slick({
 });
 
 //set active class to first slide
-$('.gallery-product-preview .slick-slide').eq(0).addClass('slick-active');
+$('#gallery-product-preview-1 .slick-slide').eq(0).addClass('slick-active');
 
 var slideTimer;
-$('.gallery-product-preview').on('mouseenter', '.slick-slide', function (e) {
+$('#gallery-product-preview-1').on('mouseenter', '.slick-slide', function (e) {
     var $currTarget = $(e.currentTarget);
-    $('.gallery-product-preview .slick-slide').removeClass('slick-current');
+    $('#gallery-product-preview-1 .slick-slide').removeClass('slick-current');
     $currTarget.addClass('slick-current');
 
-    slideTimer = setTimeout(function () {
-        var index = $('.gallery-product-preview').find('.slick-current').data('slick-index');
-        var slickObj = $('.gallery-product-max').slick('getSlick');
+    slideTimer = setInterval(function () {
+        var index = $('#gallery-product-preview-1').find('.slick-current').data('slick-index');
+        var slickObj = $('#gallery-product-preview-1').slick('getSlick');
         slickObj.slickGoTo(index);
-    }, 120);
+    }, 200);
 }).on('mouseleave', '.slick-slide', function (e) {
     clearTimeout(slideTimer);
+});
+
+$(document).on('click', '.gallery-product-max__item', function() {
+    $('.slick-slider').slick('slickGoTo', $(this).parent().attr('data-slick-index'));
+});
+
+$('#gallery-product-preview-2').on('mouseenter', '.slick-slide', function (e) {
+    var $currTarget = $(e.currentTarget);
+    $('#gallery-product-preview-2 .slick-slide').removeClass('slick-current');
+    $currTarget.addClass('slick-current');
+
+    slideTimer = setInterval(function () {
+        var index = $('#gallery-product-preview-2').find('.slick-current').data('slick-index');
+        var slickObj = $('#gallery-product-preview-2').slick('getSlick');
+        slickObj.slickGoTo(index);
+    }, 200);
+}).on('mouseleave', '.slick-slide', function (e) {
+    clearTimeout(slideTimer);
+});
+
+$('#gallery-product-max-2').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+    $('#gallery-product-preview-2 .slick-slide').removeClass('slick-current');
+    $('#gallery-product-preview-2 .slick-slide').eq(currentSlide).addClass('slick-current');
 });

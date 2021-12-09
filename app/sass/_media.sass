@@ -224,7 +224,7 @@
       margin: 0 0 30px
 
   .tabs__caption
-    font-size: 14px
+    font-size: 16px
 
   .tabs__content
     padding: 30px 0 0
@@ -362,9 +362,9 @@
       order: -1
     &__body
       width: 100%
-      order: -1
-      padding: 10px 0
-      display: none
+      padding: 0 0 10px
+      .box-text, .links-details
+        display: none
     &__footer
       width: 100%
       max-width: none
@@ -379,11 +379,12 @@
       text-align: left
     &__title
       font-size: 18px
-      &-mob
-        display: block
-        color: #000
-        margin: 0 0 10px
-        font-weight: 500
+      min-height: 40px
+      max-height: 40px
+      overflow: hidden
+      font-weight: 500
+      margin: 0
+      color: #000
     &:first-child
       border: none
 
@@ -392,6 +393,7 @@
     font-weight: 700
     font-size: 18px
     display: block
+    margin: 5px 0 0
 
   .accessories
     .section-wrapper
@@ -491,10 +493,16 @@
 
   .panels-accordion
     display: block
+
     >.panel_heading.in
       >.block_title
-        padding: 10px 0
+        padding: 10px 15px
         background: #f0f0f0
+    .block_title
+      padding: 0 15px
+      width: calc(100% + 30px)
+      margin: 0 -15px
+
 
   .spares-card__price
     font-size: 18px

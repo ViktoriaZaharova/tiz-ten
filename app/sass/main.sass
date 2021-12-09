@@ -233,16 +233,18 @@ header
   position: relative
   z-index: 3
   background: #fff
+
   &:before
     content: ''
     position: absolute
     left: 50%
-    transform: translate(-50%,0)
+    transform: translate(-50%, 0)
     bottom: 0
     height: 1px
     background: #BCBCBC
     width: calc(100% - 30px)
     max-width: 1170px
+
   .container
     align-items: center
     justify-content: space-between
@@ -576,6 +578,7 @@ footer
     width: 100%
     margin: 0 0 10px
     overflow: hidden
+
   .panel_heading
     display: none
 
@@ -979,7 +982,7 @@ footer
     transition: .3s ease
 
 .in
-  >.block_title
+  > .block_title
     &:after
       transform: rotate(180deg)
 
@@ -1149,8 +1152,10 @@ footer
   flex-wrap: wrap
   width: 100%
   margin: 0 0 27px
+
   p
     margin: 0 10px 0 0
+
   span
     font-weight: bold
     color: $accent
@@ -1196,7 +1201,6 @@ footer
 .gallery-product-max__section
   .slick-arrow
     display: none !important
-
 
 
 .product-information
@@ -1270,8 +1274,15 @@ footer
     align-items: center
     justify-content: center
     text-align: center
+
   img
     max-height: 100%
+
+#gallery-product-preview-1 .slick-track
+  transform: translate3d(0, 0, 0) !important
+
+#gallery-product-preview-2 .slick-track
+  transform: translate3d(0, 0, 0) !important
 
 .zoom
   display: inline-block
@@ -1292,6 +1303,7 @@ footer
   font-weight: 500
   position: relative
   border-bottom: 1px solid #C2C2C2
+
   li
     display: flex
     align-items: center
@@ -1305,10 +1317,13 @@ footer
     padding: 12px 0
     cursor: pointer
     position: relative
+
     &:last-child
       margin-right: 0
+
   .active
     font-weight: bold
+
     &:before
       content: ''
       position: absolute
@@ -1317,6 +1332,7 @@ footer
       width: 100%
       height: 3px
       background: #C2C2C2
+
     .tabs-icon
       transform: rotate(180deg)
 
@@ -1418,13 +1434,7 @@ footer
     -moz-box-orient: vertical
     display: -moz-box
     box-orient: vertical
-
-    &-mob
-      display: none
-      min-height: 40px
-      max-height: 40px
-      overflow: hidden
-
+    width: fit-content
   .box-text
     line-height: 24px
 
@@ -1822,7 +1832,7 @@ footer
   height: 51px
   padding: 0 19px
 
-.select2-container--default .select2-results>.select2-results__options
+.select2-container--default .select2-results > .select2-results__options
   max-height: 340px
 
 .select2-container--open .select2-dropdown--below
@@ -1877,6 +1887,7 @@ footer
   position: absolute
   top: 15px
   right: 15px
+
   img
     margin: 0
     width: 100%
@@ -1897,6 +1908,7 @@ footer
     margin: 0
     font-size: 24px
     width: fit-content
+
   .gallery-product
     max-width: none
     width: 100%
@@ -1908,8 +1920,10 @@ footer
   .modal__wrapper
     background: #fff
     margin: 20px auto
+
   .modal-header
     border: none
+
   .gallery-product-max__item
     height: 622px
 
@@ -2157,6 +2171,7 @@ footer
 .table-characteristics
   font-size: 18px
   margin: 0 0 27px
+
   thead
     background: #F5F5F5
     font-weight: 600
@@ -2217,7 +2232,7 @@ footer
 .slick-arrow
   position: absolute
   top: 50%
-  transform: translate(0,-50%)
+  transform: translate(0, -50%)
   z-index: 1
   opacity: 1
   border-radius: 0
@@ -2228,16 +2243,19 @@ footer
   display: flex
   align-items: center
   justify-content: center
+
   img
     width: 100%
 
 .slick-prev
   left: 0
+
   img
     transform: rotate(-90deg)
 
 .slick-next
   right: 0
+
   img
     transform: rotate(90deg)
 
@@ -2245,17 +2263,23 @@ footer
 .wrapper-1500
   .container
     max-width: 1500px
+
   header
     &:before
       max-width: 1500px
+
   .form-search-wrap
     max-width: 700px
+
   .btn-catalog
     padding: 16px 50px
+
   .model-gallery
     max-width: 700px
+
   .model-gallery__img
     height: 450px
+
   .product-information
     width: calc(100% - 700px)
 
