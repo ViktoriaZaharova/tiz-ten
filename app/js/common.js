@@ -321,19 +321,20 @@ $('#gallery-product-preview-2').slick({
 //set active class to first slide
 $('#gallery-product-preview-1 .slick-slide').eq(0).addClass('slick-active');
 
-var slideTimer;
+var slideTimer1;
+var slideTimer2;
 $('#gallery-product-preview-1').on('mouseenter', '.slick-slide', function (e) {
     var $currTarget = $(e.currentTarget);
     $('#gallery-product-preview-1 .slick-slide').removeClass('slick-current');
     $currTarget.addClass('slick-current');
 
-    slideTimer = setInterval(function () {
+    slideTimer1 = setInterval(function () {
         var index = $('#gallery-product-preview-1').find('.slick-current').data('slick-index');
         var slickObj = $('#gallery-product-preview-1').slick('getSlick');
         slickObj.slickGoTo(index);
     }, 200);
 }).on('mouseleave', '.slick-slide', function (e) {
-    clearTimeout(slideTimer);
+    clearTimeout(slideTimer1);
 });
 
 $(document).on('click', '.gallery-product-max__item', function() {
@@ -341,17 +342,24 @@ $(document).on('click', '.gallery-product-max__item', function() {
 });
 
 $('#gallery-product-preview-2').on('mouseenter', '.slick-slide', function (e) {
-    var $currTarget = $(e.currentTarget);
-    $('#gallery-product-preview-2 .slick-slide').removeClass('slick-current');
-    $currTarget.addClass('slick-current');
-
-    slideTimer = setInterval(function () {
-        var index = $('#gallery-product-preview-2').find('.slick-current').data('slick-index');
-        var slickObj = $('#gallery-product-preview-2').slick('getSlick');
-        slickObj.slickGoTo(index);
-    }, 200);
+	var $currTarget = $(e.currentTarget);
+	$('#gallery-product-preview-2 .slick-slide').removeClass('slick-current');
+	$currTarget.addClass('slick-current');
+	var index = $('#gallery-product-preview-2').find('.slick-current').data('slick-index');
+	var slickObj = $('#gallery-product-preview-2').slick('getSlick');
+	slickObj.slickGoTo(index);
+    slideTimer2 = setTimeout(function () {
+		var $currTarget = $(e.currentTarget);
+		$('#gallery-product-preview-2 .slick-slide').removeClass('slick-current');
+		$currTarget.addClass('slick-current');
+		var index = $('#gallery-product-preview-2').find('.slick-current').data('slick-index');
+		var slickObj = $('#gallery-product-preview-2').slick('getSlick');
+		slickObj.slickGoTo(index);
+    }, 150);
 }).on('mouseleave', '.slick-slide', function (e) {
-    clearTimeout(slideTimer);
+	/*/
+    clearTimeout(slideTimer2);
+	/*/
 });
 
 $('#gallery-product-max-2').on('afterChange', function(event, slick, currentSlide, nextSlide) {
