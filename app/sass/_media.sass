@@ -360,6 +360,7 @@
       width: 100%
       height: 160px
       order: -1
+      padding: 5px
     &__body
       width: 100%
       padding: 0 0 10px
@@ -378,10 +379,9 @@
       width: 100%
       text-align: left
     &__title
-      font-size: 18px
-      min-height: 40px
-      max-height: 40px
-      overflow: hidden
+      font-size: 14px
+      min-height: 54px
+      //overflow: hidden
       font-weight: 500
       margin: 0
       color: #000
@@ -740,6 +740,24 @@
 
   .characteristics-title
     display: none
+
+  #product__modal
+    .modal-body
+      height: calc(100% - 40px)
+
+
+    .gallery-product
+      height: 100%
+      display: flex
+      flex-direction: column
+      flex-wrap: nowrap
+
+    .gallery-product-preview
+      height: auto
+      margin: 0 auto
+
+    .gallery-product-max
+      margin: auto
 
 @media only screen and (max-width: 480px)
   .category-box

@@ -64,28 +64,6 @@ $(function () {
     });
 });
 
-$('.models-box .list-models').each(function () {
-    if ($(this).find('li').length > 4) {
-        $(this).find('li').slice(4).hide();
-        $(this).parent('.models-box').append('<a href="#" class="list-models-toggle color-accent">показать все</a>');
-    }
-
-});
-
-$('.list-models-toggle').on('click', function (e) {
-    e.preventDefault();
-    $('.list-models li:hidden').slideDown();
-    $(this).hide();
-});
-
-
-// $('.list-characteristics').each(function () {
-//     if ($(this).find('li').length > 4) {
-//         $(this).find('li').slice(4).hide();
-//         $(this).parent('.characteristics-wrap').append('<a href="#" class="btn-load-characteristics color-accent">Все характеристики</a>')
-//     }
-// });
-
 
 $('.btn-load-characteristics').on('click', function(e){
     e.preventDefault();

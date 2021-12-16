@@ -1187,6 +1187,7 @@ footer
   margin: 0 auto 20px
   background: #fff
   cursor: pointer
+  overflow: hidden
   transition: .3s ease
   border: 1px solid transparent
     radius: 7px
@@ -1629,9 +1630,9 @@ footer
   display: flex
   flex-direction: column
   align-items: flex-start
-
+  padding: 0 10px
   &__img
-    padding: 0 20px 0 0
+    padding: 10px 20px
     width: 100%
     height: 274px
     display: flex
@@ -1744,11 +1745,25 @@ footer
   label
     width: calc(40% - 30px)
 
-.form-filter__label
+
+.form-filter__label .select2-container
   border: 1px solid #C2C2C2
     radius: 5px
-  overflow: hidden
   padding: 3px 5px
+  overflow: hidden
+  height: 50px
+  display: flex
+  align-items: center
+  width: 100%
+  justify-content: space-between
+
+.form-filter__label
+  .selection
+    width: 100%
+  .select2-container--default .select2-selection--single
+    display: flex
+    align-items: center
+    justify-content: space-between
 
 .btn-white
   color: #5F5F5F
@@ -1776,8 +1791,8 @@ footer
   font-family: $default-font
   padding: 0
   margin: 0 20px 0 0
-  border: none
-    bottom: 1px solid #C2C2C2
+  //border: none
+  //  bottom: 1px solid #C2C2C2
 
 .select2-container--default .select2-selection--single .select2-selection__arrow
   background: url("../img/arrow-bottom.svg") no-repeat center
